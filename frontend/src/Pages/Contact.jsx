@@ -1,8 +1,8 @@
 import React from "react";
 import Title from "../components/Title";
-import { assets } from "../assets/assets";
 import NewsLetterBox from "../components/NewsLetterBox";
 import { motion } from "framer-motion";
+import { FiMessageSquare } from "react-icons/fi";
 const Contact = () => {
   return (
     <div className="py-10 border-t border-[#191973]">
@@ -10,15 +10,15 @@ const Contact = () => {
         <Title text1={'CONTACT'} text2={'US'} />
       </div>
       <div className='my-10 flex flex-col justify-center md:flex-row gap-10'>
-        <motion.img
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className='w-full md:max-w-[480px] border border-[#191973] rounded-lg hover:shadow-xl hover:scale-[1.01] transition-transform duration-300'
-          src={assets.contact_img}
-          alt="Contact Us"
-        />
+          className='w-full md:max-w-[480px] border border-[#191973] rounded-lg hover:shadow-xl hover:scale-[1.01] transition-transform duration-300 flex items-center justify-center text-[#191973] bg-zinc-50 text-[140px]'
+        >
+          <FiMessageSquare />
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

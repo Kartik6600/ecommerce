@@ -4,6 +4,7 @@ import { assets } from "../assets/assets";
 import NewsLetterBox from "../components/NewsLetterBox";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
+import { RiTeamFill } from "react-icons/ri";
 const About = () => {
   const [showMore, setShowMore] = useState(false);
   return (
@@ -12,15 +13,15 @@ const About = () => {
         <Title text1={'ABOUT'} text2={'US'} />
       </div>
       <div className='my-10 flex flex-col md:flex-row gap-10'>
-        <motion.img
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className='w-full md:max-w-[450px] border border-[#191973] rounded-lg'
-          src={assets.about_img}
-          alt="About Forever"
-        />
+          className='w-full md:max-w-[450px] border border-[#191973] rounded-lg flex items-center justify-center bg-zinc-50 text-[#191973] text-[150px] h-[300px]'
+        >
+          <RiTeamFill />
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -37,8 +38,8 @@ const About = () => {
               </>
             )}
           </p>
-          <button 
-            onClick={() => setShowMore(!showMore)} 
+          <button
+            onClick={() => setShowMore(!showMore)}
             className="text-blue-700 hover:underline w-fit"
           >
             {showMore ? "Show Less" : "Read More"}
