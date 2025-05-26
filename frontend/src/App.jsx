@@ -18,7 +18,8 @@ import Verify from "./Pages/Verify";
 import ForgotPassword from "./Pages/ForgotPassword";
 import Profile from "./Pages/Profile";
 import WishList from "./Pages/WishList";
-import Theme from './Theme'
+import Theme from './Theme';
+import './index.css';
 const App = () => {
   return (
     <Theme>
