@@ -1,0 +1,89 @@
+/* Ensure Tailwind CSS is installed and configured correctly */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+a.active hr {
+  display: block;
+}
+*{
+  font-family: 'Outfit';
+}
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 640px) {
+  a.active{
+    background-color: #101049;
+    color: white;
+  }
+}
+@media (max-width: 410px) {
+      .mobilenotshow {
+        display: none;
+      }
+}
+.mobileshow {
+  display: none;
+}
+@media (max-width: 410px) {
+  .mobileshow {
+    display: block;
+  }
+}
+ @keyframes scrollBackground {
+  0% {
+    transform: translateY(0) rotate(3deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(-3deg);
+  }
+}
+@keyframes imageFloat {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(5deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(-5deg) scale(0.95);
+  }
+  75% {
+    transform: rotate(3deg) scale(1.02);
+  }
+}
+@keyframes imageSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animated-background {
+  animation: scrollBackground 45s linear infinite;
+}
+.animate-image {
+  animation: 
+    imageFloat 8s ease-in-out infinite,
+    imageSpin 25s linear infinite;
+  transform-origin: center center;
+}
+/* Optional: Add 3D effect */
+.animated-background {
+  perspective: 1000px;
+}
+.animated-background img {
+  transform-style: preserve-3d;
+}
+
+
+.input-style {
+  @apply bg-zinc-100 w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049];
+}
