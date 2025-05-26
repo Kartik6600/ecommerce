@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // dotenv.config()
 // https://vite.dev/config/
 export default defineConfig({
+    base: './',
     plugins: [react()],
     server: {port:5173},
     appType: 'spa' 
