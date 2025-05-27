@@ -298,15 +298,34 @@ const PlaceOrder = () => {
           <div className="bg-zinc-100 rounded-xl p-8 w-[90%] max-w-md shadow-lg border border-[#191973]">
             <h2 className="text-lg font-semibold text-[#101049] mb-4">Confirm Your Order</h2>
             <p className="mb-2">Payment Method: <strong>{method.toUpperCase()}</strong></p>
-            <p className="mb-4">Total Amount: <strong>₹{(getCartAmount() - (getCartAmount() * discountAmount) / 100 + delivery_fee).toFixed(2)}</strong></p>
-            <div className="flex justify-end space-x-4">
-              <button className="px-4 py-2 rounded bg-gray-300 text-[#101049] hover:bg-gray-400" onClick={() => setShowConfirmation(false)}>
-                Cancel
-              </button>
-              <button className="px-4 py-2 rounded bg-sky-300 text-[#101049] font-semibold hover:bg-pink-200" onClick={submitFinalOrder}>
-                Proceed
-              </button>
-            </div>
+            {(() => {
+              const totalAmount = getCartAmount() - (getCartAmount() * discountAmount) / 100 + delivery_fee;
+              const isStripeAndTooLow = method === 'stripe' && totalAmount < 50;
+              return (
+                <>
+                  <p className="mb-4">Total Amount: <strong>₹{totalAmount.toFixed(2)}</strong></p>
+                  {isStripeAndTooLow && (
+                    <p className="text-red-600 text-sm mb-4">Minimum order amount for Stripe payment is ₹50.</p>
+                  )}
+                  <div className="flex justify-end space-x-4">
+                    <button
+                      className="px-4 py-2 rounded bg-gray-300 text-[#101049] hover:bg-gray-400"
+                      onClick={() => setShowConfirmation(false)}
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      className={`px-4 py-2 rounded font-semibold text-[#101049] ${isStripeAndTooLow ? 'bg-gray-300 cursor-not-allowed' : 'bg-sky-300 hover:bg-pink-200'
+                        }`}
+                      onClick={submitFinalOrder}
+                      disabled={isStripeAndTooLow}
+                    >
+                      Proceed
+                    </button>
+                  </div>
+                </>
+              );
+            })()}
           </div>
         </div>
       )}
