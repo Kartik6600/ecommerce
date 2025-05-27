@@ -4,14 +4,12 @@ import Title from "./Title";
 import Products from "../components/Products";
 import { motion } from "framer-motion";
 import { FaSpinner } from "react-icons/fa";
-
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
   const [visibleCount, setVisibleCount] = useState(10);
   const [latestProducts, setLatestProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
-
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => {
@@ -23,7 +21,6 @@ const LatestCollection = () => {
     }, 500);
     return () => clearTimeout(timer);
   }, [products, visibleCount]);
-
   const loadMore = () => {
     setLoadingMore(true);
     setTimeout(() => {
@@ -36,7 +33,6 @@ const LatestCollection = () => {
       setLoadingMore(false);
     }, 500);
   };
-
   return (
     <div className="">
       <div className="text-center py-8 text-3xl">
@@ -45,7 +41,6 @@ const LatestCollection = () => {
           Step into the season with our stunning New Collection – where fresh style begins.
         </p>
       </div>
-
       {loading ? (
         <div className="flex justify-center items-center py-10">
           <FaSpinner className="animate-spin text-2xl text-[#101049]" />
@@ -69,7 +64,6 @@ const LatestCollection = () => {
               </motion.div>
             ))}
           </div>
-
           {visibleCount < products.length && (
             <div className="flex justify-center mt-6">
               <button
@@ -89,5 +83,4 @@ const LatestCollection = () => {
     </div>
   );
 };
-
 export default LatestCollection;

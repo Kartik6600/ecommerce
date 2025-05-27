@@ -85,8 +85,6 @@ a.active hr {
 .animated-background img {
   transform-style: preserve-3d;
 }
-
-
 .input-style {
   @apply bg-zinc-100 w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049];
 }

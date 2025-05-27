@@ -58,7 +58,6 @@ const About = () => {
         >
           <RiTeamFill size={150} />
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -81,7 +80,6 @@ const About = () => {
           >
             {showMore ? "Show Less" : "Read More"}
           </button>
-
           <b className='text-[#191973] text-xl'>Our Mission</b>
           <p className='text-sm'>
             Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.

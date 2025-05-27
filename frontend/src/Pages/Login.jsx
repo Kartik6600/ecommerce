@@ -128,7 +128,6 @@ const Login = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       />
-
       <motion.div
         className='w-full flex justify-between text-sm -mt-1 px-1'
         initial={{ opacity: 0 }}

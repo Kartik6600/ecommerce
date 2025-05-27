@@ -6,26 +6,20 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
 # Dependency directories
 node_modules/
-
 # Build output
 dist/
 dist-ssr/
-
 # Environment files
 *.local
 .env
-
 # .env files
 .env*
 *.env
-
 # macOS system files
 .DS_Store
 .ds_store
-
 # Editor settings
 .vscode/*
 !.vscode/extensions.json
@@ -35,6 +29,5 @@ dist-ssr/
 *.njsproj
 *.sln
 *.sw?
-
 # Lockfiles
 package-lock.json

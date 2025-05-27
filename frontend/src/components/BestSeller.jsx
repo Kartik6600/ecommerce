@@ -4,14 +4,12 @@ import Title from "./Title";
 import Products from "../components/Products";
 import { motion } from "framer-motion";
 import { FaSpinner } from "react-icons/fa";
-
 const BestSeller = () => {
   const { products } = useContext(ShopContext);
   const [bestSellers, setBestSellers] = useState([]);
   const [visibleCount, setVisibleCount] = useState(5);
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
-
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => {
@@ -21,7 +19,6 @@ const BestSeller = () => {
     }, 500);
     return () => clearTimeout(timer);
   }, [products, visibleCount]);
-
   const loadMore = () => {
     setLoadingMore(true);
     setTimeout(() => {
@@ -32,9 +29,7 @@ const BestSeller = () => {
       setLoadingMore(false);
     }, 500);
   };
-
   const totalBestSellers = products.filter((item) => item?.bestseller === true).length;
-
   return (
     <div>
       <div className="text-center py-8 text-3xl">
@@ -43,7 +38,6 @@ const BestSeller = () => {
           Discover what everyone’s loving – our Bestsellers are tried, true, and trending.
         </p>
       </div>
-
       {loading ? (
         <div className="flex justify-center items-center py-10">
           <FaSpinner className="animate-spin text-2xl text-[#101049]" />
@@ -67,7 +61,6 @@ const BestSeller = () => {
               </motion.div>
             ))}
           </div>
-
           {visibleCount < totalBestSellers && (
             <div className="flex justify-center mt-6">
               <button
@@ -85,5 +78,4 @@ const BestSeller = () => {
     </div>
   );
 };
-
 export default BestSeller;

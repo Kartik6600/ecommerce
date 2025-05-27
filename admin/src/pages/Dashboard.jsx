@@ -72,7 +72,6 @@ const Dashboard = ({ token }) => {
     acc[product.category] = (acc[product.category] || 0) + 1;
     return acc;
   }, {});
-
   const salesByCategory = {};
   const salesOverTime = orders.reduce((acc, order) => {
     const date = new Date(order.createdAt).toISOString().split('T')[0];
@@ -100,7 +99,6 @@ const Dashboard = ({ token }) => {
       return bScore - aScore;
     })
     .slice(0, 5);
-
   const userActivity = data.users
     .sort((a, b) => b.loginCount - a.loginCount)
     .slice(0, 5)
@@ -109,7 +107,6 @@ const Dashboard = ({ token }) => {
       logins: user.loginCount,
       orders: user.orders.length
     }));
-
   setStats({
     totalUsers: data.users.length,
     totalProducts: data.products.length,
