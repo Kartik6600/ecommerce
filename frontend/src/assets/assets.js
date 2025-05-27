@@ -20,10 +20,14 @@ import superhero_16 from './superhero_16.png'
 import superhero_17 from './superhero_17.png'
 import superhero_18 from './superhero_18.png'
 import superhero_19 from './superhero_19.png'
+import receiptlogo1 from './receiptlogo1.png'
+import receiptlogo2 from './receiptlogo2.png'
+import receiptlogo3 from './receiptlogo3.png'
 export const assets = {
     logo,
     hero_img,
     logo1,
+    receiptlogo1 ,receiptlogo2, receiptlogo3,
     superhero_1,superhero_2,superhero_3,superhero_4,superhero_5,
     superhero_6,superhero_7,superhero_8,superhero_9,superhero_10,
     superhero_11, superhero_12, superhero_13, superhero_14, superhero_15,
