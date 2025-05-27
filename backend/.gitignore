@@ -16,6 +16,11 @@ dist-ssr/
 
 # Environment files
 *.local
+.env
+
+# .env files
+.env*
+*.env
 
 # macOS system files
 .DS_Store
