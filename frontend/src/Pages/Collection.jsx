@@ -105,9 +105,8 @@ const Collection = () => {
   return (
     <div className="flex flex-col sm:flex-row py-10 border-t border-[#191973] h-[calc(100vh-80px)]">
       <div
-        className={`fixed top-0 left-0 sm:static bg-zinc-200 z-20 sm:z-auto sm:bg-transparent h-full sm:h-auto w-3/4 sm:w-auto overflow-y-auto sm:overflow-visible transition-transform duration-300 ease-in-out ${
-          showFilter ? "translate-x-0" : "-translate-x-full sm:translate-x-0"
-        }`}
+        className={`fixed top-0 left-0 sm:static bg-zinc-200 z-20 sm:z-auto sm:bg-transparent h-full sm:h-auto w-3/4 sm:w-auto overflow-y-auto sm:overflow-visible transition-transform duration-300 ease-in-out ${showFilter ? "translate-x-0" : "-translate-x-full sm:translate-x-0"
+          }`}
       >
         <div className="min-w-60 pr-4 p-4 sm:p-0 sm:pr-4">
           <div className="flex justify-end sm:hidden mb-4">
@@ -195,9 +194,8 @@ const Collection = () => {
                 <button
                   key={type}
                   onClick={() => setSortType(type)}
-                  className={`px-3 py-2 hover:bg-zinc-100 flex items-center justify-between ${
-                    sortType === type ? "bg-zinc-100" : ""
-                  }`}
+                  className={`px-3 py-2 hover:bg-zinc-100 flex items-center justify-between ${sortType === type ? "bg-zinc-100" : ""
+                    }`}
                 >
                   <span className="flex items-center gap-2">
                     {type === "relavent" && <FaSort />}
@@ -212,10 +210,10 @@ const Collection = () => {
           </div>
         </div>
         <div
-          className="overflow-y-auto pr-2 pl-2 pt-5"
+          className="overflow-y-auto pr-2 pl-2 pt-5 pb-28"
           style={{ maxHeight: "calc(100vh - 200px)" }}
         >
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pl-1 sm:pl-5">
+          <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-2 sm:px-5">
             {filterProducts.map((item, index) => (
               <motion.div
                 key={index}

@@ -87,7 +87,7 @@ const listProduct = async (req, res) => {
     try {
         const products = await productModel
             .find({ available: { $ne: false } })
-            .select('-description -purchaseCount -createdAt');
+            .select('-description -purchaseCount');
         res.json({ success: true, products });
     } catch (error) {
         res.json({ success: false, message: error.message });

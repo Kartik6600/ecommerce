@@ -29,7 +29,7 @@ const Contact = () => {
           <p className="font-semibold text-xl text-[#191973]">Our Store</p>
           <p>Sarkhej - Gandhinagar Highway,<br />Ahmedabad, Gujarat, India</p>
           <p>
-            Tel: <a href="tel:+917955550132" className="text-blue-700 hover:underline">(079) 5555-0132</a><br />
+            Tel: <a href="tel:+918401884854" className="text-blue-700 hover:underline">+91 8401884854</a><br />
             Email: <a href="mailto:admin@forever.com" className="text-blue-700 hover:underline">admin@forever.com</a>
           </p>
           <p>Our team of dedicated professionals is here to assist you every step of the way, ensuring your satisfaction is our top priority.</p>

@@ -12,7 +12,7 @@ const About = () => {
       <div className='text-2xl text-center py-10 border-t border-[#191973]'>
         <Title text1={'ABOUT'} text2={'US'} />
       </div>
-      <div className='my-10 flex flex-col md:flex-row gap-10'>
+      {/* <div className='my-10 flex flex-col md:flex-row gap-10'>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -46,6 +46,52 @@ const About = () => {
           </button>
           <b className='text-[#191973]'>Our Mission</b>
           <p>Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.</p>
+        </motion.div>
+      </div> */}
+      <div className='my-10 flex flex-col md:flex-row gap-10'>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className='w-full md:max-w-[450px] border border-[#191973] rounded-lg flex items-center justify-center bg-zinc-50 text-[#191973] h-[300px]'
+        >
+          <RiTeamFill size={150} />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className='bg-zinc-100 flex flex-col gap-4 text-[#101049] p-5 border border-[#191973] rounded-lg w-full max-h-[300px] overflow-y-auto'
+        >
+          <b className='text-[#191973] text-xl'>Welcome to Forever</b>
+          <p className='text-sm'>
+            Forever was born out of a passion for innovation and a desire to revolutionize the way people shop online.
+            {showMore && (
+              <>
+                {" "}Our journey began with a simple idea: to provide a platform where customers can easily discover, explore, and purchase a wide range of products from the comfort of their homes.
+              </>
+            )}
+          </p>
+          <button
+            onClick={() => setShowMore(!showMore)}
+            className="text-blue-700 hover:underline w-fit text-sm"
+          >
+            {showMore ? "Show Less" : "Read More"}
+          </button>
+
+          <b className='text-[#191973] text-xl'>Our Mission</b>
+          <p className='text-sm'>
+            Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.
+          </p>
+          <p className='text-sm'>
+            Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.
+          </p>
+          <p className='text-sm'>
+            Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.
+          </p>
         </motion.div>
       </div>
       <div className='text-xl py-4'>
