@@ -5,8 +5,8 @@ const NewsLetterBox = () => {
     }
   return (
     <div className='text-center'>
-      <p className='text-2xl font-medium text-[#191973]'>Subscribe now & get 20% off</p>
-      <p className='text-[#101049] mt-3'>
+      <p className='text-2xl font-medium text-[#00bfff]'>Subscribe now & get 20% off</p>
+      <p className='text-orange-400 mt-3'>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
       </p>
       <form onSubmit={onSubmitHandler} className='w-full sm:w-1/2 flex display-flex-center space-x-2 mx-auto my-6 border-2 border-[#191973] rounded-md pl-3'>

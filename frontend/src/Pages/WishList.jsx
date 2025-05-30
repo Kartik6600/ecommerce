@@ -14,15 +14,15 @@ const Wishlist = () => {
       <div>
         {wishlistItems.map((item, index) => (
           <>
-            <div key={index} className='bg-zinc-100 py-4 border-t border-b border-[#191973] text-[#101049] grid grid-cols-[4fr_0.5fr] sm:grid-cols-[4fr_0.5fr] items-center gap-4'>
+            <div key={index} className='bg-zinc-100 py-4 border-2 border-[#FBCFE8] text-[#101049] grid grid-cols-[4fr_0.5fr] sm:grid-cols-[4fr_0.5fr] items-center gap-4'>
               <Link className='cursor-pointer' to={`/product/${item?.productId?._id}`}>
                 <div className='flex items-start gap-6'>
                   <img className='w-20 sm:w-20 border border-[#191973] rounded-md' src={item?.productId?.image[0]} alt="" />
                   <div>
                     <p className='text-xs sm:text-lg font-medium text-[#101049]'>{item?.productId?.name}</p>
-                    <p className='text-xs sm:text-lg font-medium text-[#101049]'>Category : {item?.productId?.category} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sub Category : {item?.productId?.subCategory}</p>
-                    <p className='text-xs sm:text-lg font-medium text-[#101049]'>Sub Category : {item?.productId?.subCategory}</p>
-                    <p className='text-xs sm:text-lg font-medium text-[#101049]'>Available Sizes : {item?.productId?.sizes?.join('   ')}</p>
+                    <p className='text-xs sm:text-lg text-[#101049]'>Category : {item?.productId?.category} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sub Category : {item?.productId?.subCategory}</p>
+                    <p className='text-xs sm:text-lg text-[#101049]'>Sub Category : {item?.productId?.subCategory}</p>
+                    <p className='text-xs sm:text-lg text-[#101049]'>Available Sizes : {item?.productId?.sizes?.join('   ')}</p>
                   </div>
                 </div>
               </Link>
@@ -35,7 +35,7 @@ const Wishlist = () => {
         ))}
       </div>
       {wishlistItems.length === 0 && (
-        <div className="text-center mt-10 text-[#101049] py-44">
+        <div className="text-center mt-10 text-orange-400 py-44">
           ☹️ Your wishlist is empty.
         </div>
       )}

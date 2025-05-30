@@ -27,17 +27,19 @@ const ForgotPassword = () => {
         }
     }
   return (
+    <>
     <form onSubmit={handleNewPassword} className='flex flex-col item-center w-[90%] sm:max-w-96 m-auto mt-10 my-10 gap-4 text-[#101049]'>
         <div className='inline-flex item-center ml-16 gap-2 mb-2 mt-10'>
-            <p className='prata-regular text-3xl text-[#101049] '>Forgot Password</p>
-            <hr className='border-none h-[1.5px] w-7 mt-5 bg-[#101049]'/>
+            <p className='prata-regular text-3xl text-[#00bfff] '>Forgot Password</p>
+            <hr className='border-none h-[1.5px] w-7 mt-5 bg-orange-400'/>
         </div>
-      <input onChange={(e)=>setEmail(e.target.value)} value={email} type="email" className='bg-zinc-100 w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049]' placeholder='Email' required />
-      <input onChange={(e)=>setNewPassword(e.target.value)} value={newPassword} type="password" className='bg-zinc-100 w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049]' placeholder='New Password' required />
-      <input onChange={(e)=>setConfirmPassword(e.target.value)} value={confirmPassword} type="password" className='bg-zinc-100 w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049]' placeholder='Confirm New Password' required />
-      <p onClick={()=>navigate('/login')}className='cursor-pointer text-[#101049]'>Login</p>
-      <button className='border border-[#191973] rounded-md bg-sky-300 text-[#191973] px-8 py-2 hover:bg-pink-200' type='submit'>Reset Password</button>
+      <input onChange={(e)=>setEmail(e.target.value)} value={email} type="email" className='bg-zinc-100 w-full px-3 py-2 border-2 border-[#FBCFE8] rounded-md text-[#101049]' placeholder='Email' required />
+      <input onChange={(e)=>setNewPassword(e.target.value)} value={newPassword} type="password" className='bg-zinc-100 w-full px-3 py-2 border-2 border-[#FBCFE8] rounded-md text-[#101049]' placeholder='New Password' required />
+      <input onChange={(e)=>setConfirmPassword(e.target.value)} value={confirmPassword} type="password" className='bg-zinc-100 w-full px-3 py-2 border-2 border-[#FBCFE8] rounded-md text-[#101049]' placeholder='Confirm New Password' required />
+      <p onClick={()=>navigate('/login')}className='cursor-pointer text-[#00bfff]'>Login</p>
+      <button className='border border-[#FBCFE8] rounded-md bg-[#FBCFE8] text-[#191973] px-8 py-2 hover:bg-[#F472B6]' type='submit'>Reset Password</button>
     </form>
+    </>
   )
 }
 export default ForgotPassword

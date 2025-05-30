@@ -192,7 +192,7 @@ const Product = () => {
               whileTap={{ scale: 0.95 }}
               className={`flex items-center gap-1 px-3 py-1 text-sm rounded-full border ${
                 selectedRating === star
-                  ? "bg-pink-100 border-[#191973] text-[#101049]"
+                  ? "bg-green-200 border-[#191973] text-[#101049]"
                   : "bg-zinc-100 border-[#191973] text-[#101049]"
               }`}
             >

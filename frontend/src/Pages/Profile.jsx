@@ -142,12 +142,12 @@ const Profile = () => {
         }
     };
     return (
-        <div className='border-t border-[#191973] py-10'>
+        <div className='border-t-2 border-[#FBCFE8] py-10'>
             <div className='flex-1'>
                 <div className="flex justify-between text-base sm:text-2xl mb-4">
                     <Title text1={'MY'} text2={'PROFILE'} />
                 </div>
-                <div className='bg-zinc-100 rounded-2xl shadow-xl p-8 flex flex-col items-center gap-6 border border-[#191973]'>
+                <div className='bg-zinc-100 rounded-2xl shadow-xl p-8 flex flex-col items-center gap-6 border-2 border-[#FBCFE8]'>
                     <div className="relative">
                         {selectedImage ? (
                             <img

@@ -40,7 +40,7 @@ const Navbar = () => {
         setProfileOpen(false);
     };
     const navLinkClass = ({ isActive }) =>
-        `flex flex-col items-center space-y-1 text-[16px] font-medium transition duration-200 hover:text-pink-500 ${isActive ? "text-pink-500 border-b-2 border-pink-500" : "text-[#191973]"
+        `flex flex-col items-center space-y-1 text-[16px] font-medium transition duration-200 hover:text-pink-500 ${isActive ? "text-pink-500 border-b-2 border-pink-500" : "text-[#FBCFE8]"
         }`;
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -132,21 +132,21 @@ const Navbar = () => {
                 <div className="hidden lg:flex items-center gap-5">
                     <FaSearch
                         onClick={() => setShowSearch(true)}
-                        className="w-5 h-5 cursor-pointer text-[#191973] hover:text-pink-500 transition"
+                        className="w-5 h-5 cursor-pointer text-[#FBCFE8] hover:text-pink-500 transition"
                     />
                     {token && (<>
                         <Link to="/cart" className="relative">
-                            <FaShoppingCart className="w-6 h-6 text-[#191973] hover:text-pink-500 transition" />
+                            <FaShoppingCart className="w-6 h-6 text-[#FBCFE8] hover:text-pink-500 transition" />
                             {getCartCount() > 0 && (
-                                <span className="absolute -right-1 -bottom-1 text-[10px] bg-pink-500 text-white rounded-full h-4 w-4 flex items-center justify-center">
+                                <span className="absolute -right-1 -bottom-1 text-[10px] bg-blue-600 text-white rounded-full h-4 w-4 flex items-center justify-center">
                                     {getCartCount()}
                                 </span>
                             )}
                         </Link>
                         <Link to="/wishlist" className="relative">
-                            <FaHeart className="w-6 h-6 text-[#191973] hover:text-pink-500 transition" />
+                            <FaHeart className="w-6 h-6 text-[#FBCFE8] hover:text-pink-500 transition" />
                             {getWishCount() > 0 && (
-                                <span className="absolute -right-1 -bottom-1 text-[10px] bg-pink-500 text-white rounded-full h-4 w-4 flex items-center justify-center">
+                                <span className="absolute -right-1 -bottom-1 text-[10px] bg-blue-600 text-white rounded-full h-4 w-4 flex items-center justify-center">
                                     {getWishCount()}
                                 </span>
                             )}
@@ -161,10 +161,10 @@ const Navbar = () => {
                                     navigate("/login");
                                 }
                             }}
-                            className="w-6 h-6 cursor-pointer text-[#191973] hover:text-pink-500 transition"
+                            className="w-6 h-6 cursor-pointer text-[#FBCFE8] hover:text-pink-500 transition"
                         />
                         {token && profileOpen && (
-                            <div className="absolute right-0 mt-2 z-10 bg-zinc-100 text-[#191973] rounded shadow-md w-40 p-3 space-y-2">
+                            <div className="absolute right-0 mt-2 z-10 bg-[#1E1B4B] text-[#FBCFE8] rounded shadow-md w-40 p-3 space-y-2">
                                 <button onClick={() => { navigate("/profile"); setProfileOpen(false); }} className="flex items-center gap-2 hover:text-pink-500">
                                     <FaUserCircle className="w-4 h-4" />
                                     Profile
@@ -182,7 +182,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="flex items-center lg:hidden">
-                    <FaBars onClick={() => setVisible(true)} className="w-6 h-6 cursor-pointer text-[#191973]" />
+                    <FaBars onClick={() => setVisible(true)} className="w-6 h-6 cursor-pointer text-[#FBCFE8]" />
                 </div>
             </div>
             <AnimatePresence>
@@ -200,10 +200,10 @@ const Navbar = () => {
                             animate={{ x: 0 }}
                             exit={{ x: "-100%" }}
                             transition={{ type: "tween" }}
-                            className="fixed top-0 left-0 h-full bg-zinc-100 z-50 shadow-md w-4/5 sm:w-1/2 max-w-xs"
+                            className="fixed top-0 left-0 h-full bg-blue-950 z-50 shadow-md w-4/5 sm:w-1/2 max-w-xs"
                         >
                             <div className="p-4 space-y-5">
-                                <button onClick={() => setVisible(false)} className="flex items-center gap-2 text-[#191973]">
+                                <button onClick={() => setVisible(false)} className="flex items-center gap-2 text-[#00bfff]">
                                     <FaChevronLeft className="h-4 rotate-180" />
                                     Back
                                 </button>
@@ -213,26 +213,26 @@ const Navbar = () => {
                                         to={to}
                                         onClick={() => setVisible(false)}
                                         className={({ isActive }) =>
-                                            `flex items-center gap-3 text-[16px] font-medium transition duration-200 hover:text-pink-500 ${isActive ? "text-pink-500" : "text-[#191973]"}`
+                                            `flex items-center gap-3 text-[16px] font-medium transition duration-200 hover:text-pink-500 ${isActive ? "text-pink-500" : "text-[#FBCFE8]"}`
                                         }
                                     >
                                         {icon}
                                         {label}
                                     </NavLink>
                                 ))}
-                                <hr className="border-t border-gray-300 my-4" />
+                                <hr className="border-t border-[#00bfff] my-4" />
                                 {actionLinks.map(({ to, label, icon, onClick, badge }) =>
                                     to ? (
                                         <Link
                                             to={to}
                                             key={label}
                                             onClick={() => setVisible(false)}
-                                            className="flex items-center gap-3 text-[16px] font-medium text-[#191973] hover:text-pink-500 relative"
+                                            className="flex items-center gap-3 text-[16px] font-medium text-[#FBCFE8] hover:text-pink-500 relative"
                                         >
                                             {icon}
                                             {label}
                                             {badge > 0 && (
-                                                <span className="absolute right-0 -top-2 text-[10px] bg-[#191973] text-white rounded-full h-4 w-4 flex items-center justify-center">
+                                                <span className="absolute right-0 -top-2 text-[10px] bg-blue-600 text-white rounded-full h-4 w-4 flex items-center justify-center">
                                                     {badge}
                                                 </span>
                                             )}
@@ -241,7 +241,7 @@ const Navbar = () => {
                                         <button
                                             key={label}
                                             onClick={onClick}
-                                            className="flex items-center gap-3 text-[16px] font-medium text-[#191973] hover:text-pink-500"
+                                            className="flex items-center gap-3 text-[16px] font-medium text-[#FBCFE8] hover:text-pink-500"
                                         >
                                             {icon}
                                             {label}
@@ -253,6 +253,7 @@ const Navbar = () => {
                     </>
                 )}
             </AnimatePresence>
+            <div className="border border-[#FBCFE8]"></div>
         </header>
     );
 };

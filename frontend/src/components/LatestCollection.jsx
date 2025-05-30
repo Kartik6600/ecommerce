@@ -37,19 +37,20 @@ const LatestCollection = () => {
     <div className="">
       <div className="text-center py-8 text-3xl">
         <Title text1={"LATEST"} text2={"COLLECTIONS"} />
-        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-[#101049]">
+        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-orange-400">
           Step into the season with our stunning New Collection – where fresh style begins.
         </p>
       </div>
       {loading ? (
         <div className="flex justify-center items-center py-10">
-          <FaSpinner className="animate-spin text-2xl text-[#101049]" />
+          <FaSpinner className="animate-spin text-2xl text-[#00bfff]" />
         </div>
       ) : (
         <>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
             {latestProducts.map((item, index) => (
               <motion.div
+                className="border border-[#00bfff] rounded-md"
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
@@ -69,7 +70,7 @@ const LatestCollection = () => {
               <button
                 onClick={loadMore}
                 disabled={loadingMore}
-                className="flex items-center gap-2 px-4 py-2 bg-[#101049] text-white rounded-xl hover:bg-[#1e1e7a] transition disabled:opacity-70"
+                className="flex items-center gap-2 px-4 py-2 bg-[#FBCFE8] text-[#101049] rounded-xl hover:bg-[#F472B6] transition disabled:opacity-70"
               >
                 {loadingMore && (
                   <FaSpinner className="animate-spin text-sm" />
