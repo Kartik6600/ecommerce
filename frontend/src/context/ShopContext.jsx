@@ -17,8 +17,17 @@ const ShopContextProvider = (props) => {
   const addToCart = async (itemId, size) => {
     if (!size) return toast.error('Select size');
     if (token) {
-      await axios.post(`${backendUrl}/api/cart/add`, { itemId, size }, { headers: { token } });
-      fetchDataCart();
+      try {
+        const response = await axios.post(
+          `${backendUrl}/api/cart/add`,
+          { itemId, size },
+          { headers: { token } }
+        );
+        fetchDataCart();
+        toast.success(response.data?.message || 'Added to cart', { autoClose: 1000 });
+      } catch (error) {
+        toast.error(error.response?.data?.message || error.message || 'Failed to add to cart', { autoClose: 1000 });
+      }
     }
   };
   const getCartCount = () => {
