@@ -14,7 +14,7 @@ const Theme = ({ children }) => {
     assets.superhero_19,
   ];
   return (
-    <div className="relative px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] text-moon overflow-hidden bg-zinc-100">
+    <div className="relative min-h-screen px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] text-moon overflow-hidden bg-zinc-100">
       <div
         className="fixed top-0 left-0 w-full h-[200vh] opacity-10 z-0 pointer-events-none overflow-hidden animated-background"
         style={{

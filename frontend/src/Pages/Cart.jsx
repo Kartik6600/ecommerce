@@ -72,20 +72,23 @@ const Cart = () => {
         }
         {
           cartData.length === 0 && (
-            <div className="text-center mt-10 text-[#101049]">
+            <div className="text-center mt-10 text-[#101049] py-44">
               ☹️ No Items in Cart.
             </div>
           )
         }
       </div>
-      <div className='flex justify-end my-20'>
-        <div className='w-full sm:w-[450px]'>
-          <CartTotal />
-          <div className='w-full text-end'>
-            <button onClick={() => navigate('/place-order')} className='bg-sky-300 text-[#101049] border border-[#191973] rounded-md text-sm my-8 px-8 py-3 font-semibold active:bg-[#101049] active:text-[#ffffff] hover:bg-pink-200'>PROCEED TO CHECKOUT</button>
+      {
+        cartData.length !== 0 && (
+          <div className='flex justify-end my-20'>
+            <div className='w-full sm:w-[450px]'>
+              <CartTotal />
+              <div className='w-full text-end'>
+                <button onClick={() => navigate('/place-order')} className='bg-sky-300 text-[#101049] border border-[#191973] rounded-md text-sm my-8 px-8 py-3 font-semibold active:bg-[#101049] active:text-[#ffffff] hover:bg-pink-200'>PROCEED TO CHECKOUT</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        )}
     </div>
   )
 }

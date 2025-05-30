@@ -3,7 +3,6 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import { backendUrl } from '../App';
 import { FiUpload } from 'react-icons/fi';
-
 const EditProductPopup = ({ productId, token, onClose }) => {
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState({});

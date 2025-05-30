@@ -35,7 +35,7 @@ const Wishlist = () => {
         ))}
       </div>
       {wishlistItems.length === 0 && (
-        <div className="text-center mt-10 text-[#101049]">
+        <div className="text-center mt-10 text-[#101049] py-44">
           ☹️ Your wishlist is empty.
         </div>
       )}
