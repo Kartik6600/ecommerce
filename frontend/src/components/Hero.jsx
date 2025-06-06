@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Hero() {
   return (
     <Link to="/collection">
-      <div className="mt-10 flex flex-col sm:flex-row border-2 border-[#FBCFE8] rounded-md cursor-pointer bg-zinc-100" >
-        <div className="w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0 bg-blue-950">
+      <div className="mt-10 flex flex-col sm:flex-row border-2 border-[#FBCFE8] rounded-md cursor-pointer" >
+        <div className="w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0 bg-zinc-100">
           <div className="text-[#414141]">
             <div className="flex items-center space-x-2">
               <p className="w-8 md:w-11 h-[2px] bg-orange-400"></p>

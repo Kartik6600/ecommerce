@@ -73,9 +73,9 @@ const Collection = () => {
     );
   };
   return (
-    <div className="flex flex-col md:flex-row pt-4 md:pt-10 border-t-2 border-[#FBCFE8] h-full min-h-screen">
+    <div className="flex flex-col md:flex-row pt-4 md:pt-10 h-full min-h-screen">
       {/* Filter sidebar */}
-      <div className={`fixed md:static top-0 left-0 bg-blue-950 md:bg-transparent z-30 md:z-auto w-3/4 md:w-64 h-full md:h-auto overflow-y-auto md:overflow-visible transition-transform duration-300 ease-in-out ${showFilter ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}>
+      <div className={`fixed md:static top-0 left-0 bg-black md:bg-transparent z-30 md:z-auto w-3/4 md:w-64 h-full md:h-auto overflow-y-auto md:overflow-visible transition-transform duration-300 ease-in-out ${showFilter ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}>
         <div className="p-4 md:p-0 md:pr-4">
           <div className="flex justify-end md:hidden mb-4">
             <button onClick={() => setShowFilter(false)} className="text-[#00bfff] text-2xl">

@@ -164,7 +164,7 @@ const Navbar = () => {
                             className="w-6 h-6 cursor-pointer text-[#FBCFE8] hover:text-pink-500 transition"
                         />
                         {token && profileOpen && (
-                            <div className="absolute right-0 mt-2 z-10 bg-[#1E1B4B] text-[#FBCFE8] rounded shadow-md w-40 p-3 space-y-2">
+                            <div className="absolute right-0 mt-2 z-10 bg-black text-[#FBCFE8] rounded shadow-md w-40 p-3 space-y-2">
                                 <button onClick={() => { navigate("/profile"); setProfileOpen(false); }} className="flex items-center gap-2 hover:text-pink-500">
                                     <FaUserCircle className="w-4 h-4" />
                                     Profile
@@ -200,7 +200,7 @@ const Navbar = () => {
                             animate={{ x: 0 }}
                             exit={{ x: "-100%" }}
                             transition={{ type: "tween" }}
-                            className="fixed top-0 left-0 h-full bg-blue-950 z-50 shadow-md w-4/5 sm:w-1/2 max-w-xs"
+                            className="fixed top-0 left-0 h-full bg-black z-50 shadow-md w-4/5 sm:w-1/2 max-w-xs"
                         >
                             <div className="p-4 space-y-5">
                                 <button onClick={() => setVisible(false)} className="flex items-center gap-2 text-[#00bfff]">

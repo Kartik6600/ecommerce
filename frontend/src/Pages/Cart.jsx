@@ -25,7 +25,7 @@ const Cart = () => {
   }, [cartItems]);
   const [forceUpdate, setForceUpdate] = useState(false);
   return (
-    <div className='border-t-2 border-[#FBCFE8] py-10'>
+    <div className='py-10'>
       <div className='text-2xl mb-3'>
         <Title text1={'Your'} text2={'CART'} />
       </div>

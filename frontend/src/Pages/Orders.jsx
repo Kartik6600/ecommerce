@@ -157,7 +157,7 @@ const Orders = () => {
   };
   return (
     <>
-      <div className="border-t-2 border-[#FBCFE8] py-10 px-4 sm:px-8 text-[#101049]">
+      <div className="py-10 px-4 sm:px-8 text-[#101049]">
         <div className="text-2xl mb-8">
           <Title text1={'MY'} text2={'ORDERS'} />
         </div>

@@ -9,7 +9,7 @@ const About = () => {
   const [showMore, setShowMore] = useState(false);
   return (
     <div>
-      <div className='text-2xl text-center py-10 border-t-2 border-[#FBCFE8]'>
+      <div className='text-2xl text-center py-10'>
         <Title text1={'ABOUT'} text2={'US'} />
       </div>
       <div className='my-10 flex flex-col md:flex-row gap-10'>
