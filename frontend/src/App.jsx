@@ -19,6 +19,7 @@ import ForgotPassword from "./Pages/ForgotPassword";
 import Profile from "./Pages/Profile";
 import WishList from "./Pages/WishList";
 import Theme from './Theme';
+import OAuthRedirect from './OAuthRedirect.jsx'
 import './index.css';
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/wishlist" element={<WishList />} />
+        <Route path="/oauth-redirect" element={<OAuthRedirect />} />
       </Routes>
       <Footer />
     </Theme>
