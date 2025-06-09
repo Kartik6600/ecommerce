@@ -9,6 +9,7 @@ import wishlistRouter from './routes/wishlistRoute.js'
 import orderRouter from './routes/orderRoute.js'
 import couponRouter from './routes/couponRoute.js'
 import cookieParser from 'cookie-parser'
+import passport from './config/passport.js'
 import morgan from 'morgan';
 import dotenv from "dotenv";
 dotenv.config();
@@ -21,6 +22,7 @@ connectCloudinary();
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
+app.use(passport.initialize());
 app.use(cors());
 // api endpoints
 app.use('/api/user', userRouter);
