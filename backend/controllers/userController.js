@@ -5,7 +5,6 @@ import passport from '../config/passport.js';
 import validator from "validator";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import passport from '../config/passport.js';
 import {v2 as cloudinary} from "cloudinary";
 const createToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET)
@@ -175,4 +174,20 @@ const dashboard = async (req, res) => {
         res.json({success:false, message: error.message})
     }
 }
-export { loginUser, registerUser,listUsers, adminLogin, resetPassword ,getUserDetail, updateProfileImage, updateUserDetail,dashboard};
+const googleAuthRedirect = (req, res, next) => {
+  const options = {
+    scope: ['profile', 'email'],
+    prompt: 'select_account',
+  };
+  passport.authenticate('google', options)(req, res, next);
+};
+const googleAuthCallback = (req, res, next) => {
+  passport.authenticate('google', { session: false, failureRedirect: '/login' }, (err, user) => {
+    if (err || !user) {
+      return res.redirect(`${process.env.FRONTEND_URL}/login?error=oauth_failed`);
+    }
+    const token = createToken(user._id);
+    res.redirect(`${process.env.FRONTEND_URL}/oauth-redirect?token=${token}`);
+  })(req, res, next);
+};
+export { loginUser, registerUser,listUsers, adminLogin, googleAuthCallback, googleAuthRedirect, resetPassword ,getUserDetail, updateProfileImage, updateUserDetail,dashboard};

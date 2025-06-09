@@ -1,5 +1,5 @@
 import express from 'express';
-import { loginUser, registerUser, listUsers,adminLogin, resetPassword, getUserDetail, updateUserDetail,updateProfileImage,dashboard} from '../controllers/userController.js';
+import { loginUser, registerUser, listUsers,adminLogin,googleAuthCallback,googleAuthRedirect, resetPassword, getUserDetail, updateUserDetail,updateProfileImage,dashboard} from '../controllers/userController.js';
 import authUser from '../middleware/auth.js'
 import upload from '../middleware/multer.js'
 import adminAuth from '../middleware/adminAuth.js';

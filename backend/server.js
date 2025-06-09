@@ -12,7 +12,6 @@ import wishlistRouter from './routes/wishlistRoute.js'
 import orderRouter from './routes/orderRoute.js'
 import couponRouter from './routes/couponRoute.js'
 import cookieParser from 'cookie-parser'
-import passport from './config/passport.js'
 import morgan from 'morgan';
 // App Config
 const app = express();
