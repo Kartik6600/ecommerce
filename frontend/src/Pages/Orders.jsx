@@ -411,7 +411,7 @@ const Orders = () => {
                 <div id="receipt-content">
                   <div className="my-4 p-3 flex items-center gap-4">
                     <img
-                      src={assets.receiptlogo1}
+                      src={assets.logo1}
                       className="h-14 w-auto object-contain"
                       alt="Company Logo"
                     />
