@@ -1,6 +1,7 @@
 import userModel from "../models/userModel.js";
 import productModel from "../models/productModel.js"
 import couponModel from '../models/couponModel.js';
+import passport from '../config/passport.js';
 import validator from "validator";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -174,20 +175,4 @@ const dashboard = async (req, res) => {
         res.json({success:false, message: error.message})
     }
 }
-const googleAuthRedirect = (req, res, next) => {
-  const options = {
-    scope: ['profile', 'email'],
-    prompt: 'select_account',
-  };
-  passport.authenticate('google', options)(req, res, next);
-};
-const googleAuthCallback = (req, res, next) => {
-  passport.authenticate('google', { session: false, failureRedirect: '/login' }, (err, user) => {
-    if (err || !user) {
-      return res.redirect(`${process.env.FRONTEND_URL}/login?error=oauth_failed`);
-    }
-    const token = createToken(user._id);
-    res.redirect(`${process.env.FRONTEND_URL}/oauth-redirect?token=${token}`);
-  })(req, res, next);
-};
-export { loginUser, registerUser,listUsers,googleAuthRedirect,googleAuthCallback, adminLogin, resetPassword ,getUserDetail, updateProfileImage, updateUserDetail,dashboard};
+export { loginUser, registerUser,listUsers, adminLogin, resetPassword ,getUserDetail, updateProfileImage, updateUserDetail,dashboard};

@@ -79,9 +79,9 @@ const ShopContextProvider = (props) => {
           { headers: { token } }
         );
         fetchDataWishlist();
-        toast.success(response.data?.message || 'Added to wishlist', {autoClose: 1000});
+        toast.success(response.data?.message || 'Added to wishlist', { autoClose: 1000 });
       } catch (error) {
-        toast.error(error.response?.data?.message || error.message || 'Failed to add to wishlist', {autoClose: 1000});
+        toast.error(error.response?.data?.message || error.message || 'Failed to add to wishlist', { autoClose: 1000 });
       }
     }
   };
@@ -94,10 +94,10 @@ const ShopContextProvider = (props) => {
           { itemId },
           { headers: { token } }
         );
-        toast.success(response.data.message || 'Wishlist updated', {autoClose: 1000});
+        toast.success(response.data.message || 'Wishlist updated', { autoClose: 1000 });
         fetchDataWishlist();
       } catch (error) {
-        toast.error(error.response?.data?.message || error.message || 'Failed to update wishlist', {autoClose: 1000});
+        toast.error(error.response?.data?.message || error.message || 'Failed to update wishlist', { autoClose: 1000 });
       }
     }
   };
@@ -107,7 +107,7 @@ const ShopContextProvider = (props) => {
       if (response.data.success) {
         setProducts(response.data.products)
       } else {
-        toast.error(response.data.message, {autoClose: 1000})
+        toast.error(response.data.message, { autoClose: 1000 })
       }
     } catch (error) {
       toast.error(error.message);
@@ -117,7 +117,7 @@ const ShopContextProvider = (props) => {
     try {
       const response = await axios.post(backendUrl + '/api/cart/get', {}, { headers: { token } })
       if (response.data.success) {
-        setCartItems(response.data.cartData, {autoClose: 1000})
+        setCartItems(response.data.cartData, { autoClose: 1000 })
       }
     } catch (error) {
       toast.error(error.message);
@@ -135,9 +135,9 @@ const ShopContextProvider = (props) => {
   const fetchDataWishlist = async () => {
     try {
       const wishRes = await axios.post(`${backendUrl}/api/wishlist/get`, {}, { headers: { token } });
-      setWishlistItems(wishRes.data.wishlist, {autoClose: 1000});
+      setWishlistItems(wishRes.data.wishlist, { autoClose: 1000 });
     } catch (error) {
-      toast.error(error.response?.data?.message || error.message || "Failed to fetch wishlist data", {autoClose: 1000});
+      toast.error(error.response?.data?.message || error.message || "Failed to fetch wishlist data", { autoClose: 1000 });
     }
   };
   const fetchDataCart = async () => {
@@ -159,7 +159,7 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     if (token) {
       fetchData();
-    } 
+    }
   }, [token]);
   const value = {
     products, currency, delivery_fee,

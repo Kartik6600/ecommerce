@@ -53,7 +53,7 @@ const Login = () => {
   return (
     <motion.form
       onSubmit={onSubmitHandler}
-      className='w-[90%] max-w-md mx-auto my-10 px-4 py-6 flex flex-col gap-4 text-gray-800'
+      className='w-[90%] max-w-md mx-auto my-16 px-4 py-6 flex flex-col gap-4 text-gray-800'
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -64,8 +64,8 @@ const Login = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <p className='prata-regular text-3xl text-[#101049]'>{currentState}</p>
-        <hr className='border-none h-[2px] w-7 mt-2 bg-[#101049]' />
+        <p className='prata-regular text-3xl text-[#00bfff]'>{currentState}</p>
+        <hr className='border-none h-[2px] w-7 mt-2 bg-orange-400' />
       </motion.div>
       <AnimatePresence mode="wait">
         {currentState === 'Sign Up' && (
@@ -110,7 +110,7 @@ const Login = () => {
         value={email}
         type="email"
         placeholder="Email"
-        className="input-style"
+        className="input-style border-2 border-[#FBCFE8]"
         required
         whileFocus={{ scale: 1.03 }}
         initial={{ opacity: 0 }}
@@ -122,7 +122,7 @@ const Login = () => {
         value={password}
         type="password"
         placeholder="Password"
-        className="input-style"
+        className="input-style border-2 border-[#FBCFE8]"
         required
         whileFocus={{ scale: 1.03 }}
         initial={{ opacity: 0 }}
@@ -135,18 +135,18 @@ const Login = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.45 }}
       >
-        <p onClick={() => navigate('/forgotpassword')} className='cursor-pointer text-[#101049] hover:underline'>Forgot password?</p>
+        <p onClick={() => navigate('/forgotpassword')} className='cursor-pointer text-[#00bfff] hover:underline'>Forgot password?</p>
         <p
           onClick={() => setCurrentState(currentState === 'Login' ? 'Sign Up' : 'Login')}
-          className='cursor-pointer text-[#101049] hover:underline'
+          className='cursor-pointer text-[#00bfff] hover:underline'
         >
           {currentState === 'Login' ? 'Create account' : 'Login Here'}
         </p>
       </motion.div>
       <motion.button
         type="submit"
-        className='bg-sky-300 text-[#101049] border border-[#191973] rounded-md hover:bg-pink-200 hover:text-[#191973] font-light px-8 py-2 mt-2'
-        whileHover={{ scale: 1.05, backgroundColor: "#f9a8d4", transition: { duration: 0.3 } }}
+        className='bg-[#FBCFE8] text-[#101049] border border-[#FBCFE8] rounded-md  hover:text-[#191973] font-light px-8 py-2 mt-2'
+        whileHover={{ scale: 1.05, backgroundColor: "#F472B6", transition: { duration: 0.3 } }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -154,20 +154,6 @@ const Login = () => {
       >
         {currentState === 'Login' ? 'Sign In' : 'Sign Up'}
       </motion.button>
-      <motion.div
-        className="mt-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-      >
-        <button
-          onClick={() => window.location.href = `${backendUrl}/api/user/auth/google`}
-          className="w-full flex items-center justify-center gap-2 bg-white border border-[#191973] rounded-md py-2 px-4 hover:bg-gray-50"
-        >
-          <FcGoogle />
-          Continue with Google
-        </button>
-      </motion.div>
     </motion.form>
   );
 };

@@ -9,7 +9,7 @@ const About = () => {
   const [showMore, setShowMore] = useState(false);
   return (
     <div>
-      <div className='text-2xl text-center py-10 border-t border-[#191973]'>
+      <div className='text-2xl text-center py-10'>
         <Title text1={'ABOUT'} text2={'US'} />
       </div>
       <div className='my-10 flex flex-col md:flex-row gap-10'>
@@ -18,7 +18,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className='w-full md:max-w-[450px] border border-[#191973] rounded-lg flex items-center justify-center bg-zinc-50 text-[#191973] h-[300px]'
+          className='bg-zinc-50 w-full md:max-w-[450px] border-2 border-[#FBCFE8] rounded-lg flex items-center justify-center text-[#191973] h-[300px]'
         >
           <RiTeamFill size={150} />
         </motion.div>
@@ -27,7 +27,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className='bg-zinc-100 flex flex-col gap-4 text-[#101049] p-5 border border-[#191973] rounded-lg w-full max-h-[300px] overflow-y-auto'
+          className='bg-zinc-100 flex flex-col gap-4 text-orange-800 p-5 border-2 border-[#FBCFE8] rounded-lg w-full max-h-[300px] overflow-y-auto'
         >
           <b className='text-[#191973] text-xl'>Welcome to Forever</b>
           <p className='text-sm'>
@@ -40,7 +40,7 @@ const About = () => {
           </p>
           <button
             onClick={() => setShowMore(!showMore)}
-            className="text-blue-700 hover:underline w-fit text-sm"
+            className="text-[#191973] hover:underline w-fit text-sm"
           >
             {showMore ? "Show Less" : "Read More"}
           </button>
@@ -80,12 +80,12 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className='hover:scale-[1.02] hover:shadow-xl transition-all duration-300 bg-zinc-100 border border-[#191973] rounded-md px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5 text-[#191973]'
+            className='bg-zinc-100 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border-2 border-[#FBCFE8] rounded-md px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5 text-[#191973]'
           >
-            <b className='flex items-center gap-2'>
+            <b className='flex text-[#191973] items-center gap-2'>
               <FaCheckCircle className="text-green-600" /> {item.title}
             </b>
-            <p className='text-[#101049]'>{item.content}</p>
+            <p className='text-orange-800'>{item.content}</p>
           </motion.div>
         ))}
       </div>

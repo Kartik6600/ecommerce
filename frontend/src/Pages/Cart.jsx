@@ -25,7 +25,7 @@ const Cart = () => {
   }, [cartItems]);
   const [forceUpdate, setForceUpdate] = useState(false);
   return (
-    <div className='border-t border-[#191973] py-10'>
+    <div className='py-10'>
       <div className='text-2xl mb-3'>
         <Title text1={'Your'} text2={'CART'} />
       </div>
@@ -35,7 +35,7 @@ const Cart = () => {
             const productData = item?.productData;
             return (
               <>
-                <div key={index} className='bg-zinc-100 py-4 border-t border-b border-[#191973] text-[#101049] grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] item-center gap-4'>
+                <div key={index} className='bg-zinc-100 py-4 border-2 border-[#FBCFE8] text-[#101049] grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] item-center gap-4'>
                   <div className='flex items-start gap-6'>
                     <Link className='cursor-pointer' to={`/product/${productData?._id}`}>
                       <img className='w-16 sm:w-20 border border-[#191973] rounded-md' src={productData?.image[0]} alt="" />
@@ -72,7 +72,7 @@ const Cart = () => {
         }
         {
           cartData.length === 0 && (
-            <div className="text-center mt-10 text-[#101049] py-44">
+            <div className="text-center mt-10 text-orange-400 py-44">
               ☹️ No Items in Cart.
             </div>
           )
@@ -84,7 +84,7 @@ const Cart = () => {
             <div className='w-full sm:w-[450px]'>
               <CartTotal />
               <div className='w-full text-end'>
-                <button onClick={() => navigate('/place-order')} className='bg-sky-300 text-[#101049] border border-[#191973] rounded-md text-sm my-8 px-8 py-3 font-semibold active:bg-[#101049] active:text-[#ffffff] hover:bg-pink-200'>PROCEED TO CHECKOUT</button>
+                <button onClick={() => navigate('/place-order')} className='bg-[#FBCFE8] text-[#101049] border border-[#191973] rounded-md text-sm my-8 px-8 py-3 font-semibold active:bg-[#F472B6] active:text-[#101049] hover:bg-[#F472B6]'>PROCEED TO CHECKOUT</button>
               </div>
             </div>
           </div>

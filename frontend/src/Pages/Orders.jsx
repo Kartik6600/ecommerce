@@ -157,13 +157,13 @@ const Orders = () => {
   };
   return (
     <>
-      <div className="border-t border-[#191973] py-10 px-4 sm:px-8 text-[#101049]">
+      <div className="py-10 px-4 sm:px-8 text-[#101049]">
         <div className="text-2xl mb-8">
           <Title text1={'MY'} text2={'ORDERS'} />
         </div>
         <div className="space-y-6">
           {orderData.map((order) => (
-            <div key={order._id} className="bg-zinc-100 border border-[#191973] rounded-md p-4 shadow-md">
+            <div key={order._id} className="bg-zinc-100 border-2 border-[#FBCFE8] rounded-md p-4 shadow-md">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-4">
                 <div className="flex flex-col gap-4 w-full">
                   {order.items.map((item, index) => (

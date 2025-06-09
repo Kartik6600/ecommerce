@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FiMessageSquare } from "react-icons/fi";
 const Contact = () => {
   return (
-    <div className="py-10 border-t border-[#191973]">
+    <div className="py-10">
       <div className='text-center text-2xl'>
         <Title text1={'CONTACT'} text2={'US'} />
       </div>
