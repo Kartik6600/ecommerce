@@ -129,8 +129,8 @@ const Dashboard = ({ token }) => {
      return <Loader message="Preparing Dashboard" />;
   }
   return (
-    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-gray-50 to-white min-h-screen mt-10 sm:mt-0">
-      <h1 className="text-4xl font-extrabold text-[#191973] mb-2 flex items-center gap-2 border-b pb-2">
+    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-black to-gray-800 min-h-screen mt-10 sm:mt-0">
+      <h1 className="text-4xl font-extrabold text-pink-500 mb-2 flex items-center gap-2 border-b pb-2">
        {Icon && <span className="text-pink-500">{Icon}</span>}
         {title}
       </h1>

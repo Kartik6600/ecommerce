@@ -92,15 +92,15 @@ const AddProduct = ({ token }) => {
     return <Loader message="Adding Product" />;
   }
   return (
-    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-gray-50 to-white min-h-screen mt-10 sm:mt-0">
-      <h1 className="text-4xl font-extrabold text-[#191973] mb-2 flex items-center gap-2 border-b pb-2">
+    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-black to-gray-800 min-h-screen mt-10 sm:mt-0">
+      <h1 className="text-4xl font-extrabold text-pink-500 mb-2 flex items-center gap-2 border-b pb-2">
         {Icon && <span className="text-pink-500">{Icon}</span>}
         {title}
       </h1>
       <div className="flex flex-col gap-3">
         <form onSubmit={onSubmitHandler} className="flex flex-col w-full items-start gap-4">
           <div className="w-full">
-            <p className="mb-2 text-[#101049]">Upload Images</p>
+            <p className="mb-2 text-orange-400">Upload Images</p>
             <div className="grid grid-cols-2 sm:flex gap-3 flex-wrap">
               {[image1, image2, image3, image4].map((image, index) => {
                 const setImage = [setImage1, setImage2, setImage3, setImage4][index]
@@ -109,12 +109,12 @@ const AddProduct = ({ token }) => {
                   <label htmlFor={inputId} key={index}>
                     {image ? (
                       <img
-                        className="w-20 h-20 border border-[#191973] rounded-md object-contain"
+                        className="w-20 h-20 border border-[#00bfff] rounded-md object-contain"
                         src={URL.createObjectURL(image)}
                         alt=""
                       />
                     ) : (
-                      <div className="w-20 h-20 flex items-center justify-center border border-[#191973] rounded-md text-[#191973]">
+                      <div className="w-20 h-20 flex items-center justify-center border border-[#00bfff] rounded-md text-[#00bfff]">
                         <FiUpload className="text-2xl" />
                       </div>
                     )}
@@ -130,34 +130,34 @@ const AddProduct = ({ token }) => {
             </div>
           </div>
           <div className="w-full">
-            <p className="mb-2 text-[#101049]">Product name</p>
+            <p className="mb-2 text-orange-400">Product name</p>
             <input
               onChange={(e) => setName(e.target.value)}
               value={name}
-              className="w-full max-w-[500px] px-3 py-2 border border-[#191973] rounded-md text-[#101049] bg-white"
+              className="w-full max-w-[500px] px-3 py-2 border border-[#00bfff] rounded-md text-[#101049] bg-sky-50"
               type="text"
               placeholder="Type here"
               required
             />
           </div>
           <div className="w-full">
-            <p className="mb-2 text-[#101049]">Product description</p>
+            <p className="mb-2 text-orange-400">Product description</p>
             <textarea
               onChange={(e) => setDescription(e.target.value)}
               value={description}
-              className="w-full max-w-[500px] px-3 py-2 text-[#101049] border border-[#191973] rounded-md bg-white"
+              className="w-full max-w-[500px] px-3 py-2 text-[#101049] border border-[#00bfff] rounded-md bg-sky-50"
               placeholder="Write content here"
               required
             />
           </div>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full">
             <div className="flex-1 min-w-[150px]">
-              <p className="mb-2 text-[#101049]">Product category</p>
+              <p className="mb-2 text-orange-400">Product category</p>
               <input
                 list="category-options"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-[#191973] rounded-md bg-white text-[#101049]"
+                className="w-full px-3 py-2 border border-[#00bfff] rounded-md bg-sky-50 text-[#101049]"
                 placeholder="Type or select category"
               />
               <datalist id="category-options">
@@ -167,12 +167,12 @@ const AddProduct = ({ token }) => {
               </datalist>
             </div>
             <div className="flex-1 min-w-[150px]">
-              <p className="mb-2 text-[#101049]">Sub category</p>
+              <p className="mb-2 text-orange-400">Sub category</p>
               <input
                 list="subCategory-options"
                 value={subCategory}
                 onChange={(e) => setSubCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-[#191973] rounded-md bg-white text-[#101049]"
+                className="w-full px-3 py-2 border border-[#00bfff] rounded-md bg-sky-50 text-[#101049]"
                 placeholder="Type or select subcategory"
               />
               <datalist id="subCategory-options">
@@ -182,18 +182,18 @@ const AddProduct = ({ token }) => {
               </datalist>
             </div>
             <div className="flex-1 min-w-[100px]">
-              <p className="mb-2 text-[#101049]">Product price</p>
+              <p className="mb-2 text-orange-400">Product price</p>
               <input
                 onChange={(e) => setPrice(e.target.value)}
                 value={price}
-                className="w-full px-3 py-2 border border-[#191973] rounded-md bg-white text-[#101049]"
+                className="w-full px-3 py-2 border border-[#00bfff] rounded-md bg-sky-50 text-[#101049]"
                 type="text"
                 placeholder="25"
               />
             </div>
           </div>
           <div className="w-full">
-            <p className="mb-2 text-[#101049]">Product Sizes</p>
+            <p className="mb-2 text-orange-400">Product Sizes</p>
             <div className="flex flex-wrap gap-3">
               {availableSizes.map((size) => (
                 <div
@@ -217,15 +217,16 @@ const AddProduct = ({ token }) => {
           <div className="flex items-center gap-2 mt-2">
             <input
               onChange={() => setBestseller((prev) => !prev)}
+              className='border border-[#00bfff]'
               checked={bestseller}
               type="checkbox"
               id="bestseller"
             />
-            <label htmlFor="bestseller" className="text-[#101049]">Add to Bestseller</label>
+            <label htmlFor="bestseller" className="text-orange-400">Add to Bestseller</label>
           </div>
           <button
             type="submit"
-            className="w-32 py-3 mt-4 bg-pink-100 text-[#101049] border border-[#191973] rounded-md font-semibold hover:bg-pink-200 active:bg-pink-300 active:text-white"
+            className="w-32 py-3 mt-4 bg-pink-100 text-[#101049] border border-[#bc7598] rounded-md font-semibold hover:bg-pink-200 active:bg-pink-300 active:text-white"
           >
             Add Product
           </button>

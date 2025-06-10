@@ -19,7 +19,7 @@ const App = () => {
     </div>
   );
   return (
-    <div className="bg-gray-50 h-screen flex flex-col">
+    <div className="bg-gradient-to-br from-black to-gray-800 h-screen flex flex-col">
       <ToastContainer />
       {token === "" ? (
         <Login setToken={setToken} />

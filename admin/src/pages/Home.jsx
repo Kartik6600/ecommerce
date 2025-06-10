@@ -12,8 +12,8 @@ const Home = () => {
             label,
         }))
     return (
-        <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-gray-50 to-white min-h-screen mt-10 sm:mt-0">
-            <h1 className="text-4xl font-extrabold text-[#191973] mb-2 flex items-center gap-2">
+        <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-black to-gray-800 min-h-screen mt-10 sm:mt-0">
+            <h1 className="text-4xl font-extrabold text-pink-500 mb-2 flex items-center gap-2 border-b pb-2">
                 <FiHome className="text-pink-500" />
                 Welcome Admin
             </h1>
@@ -22,7 +22,7 @@ const Home = () => {
                     <div
                         key={index}
                         onClick={() => navigate(item.to)}
-                        className="cursor-pointer group bg-white/80 border border-indigo-300 rounded-2xl p-6 shadow-xl backdrop-blur hover:bg-pink-100/50 transition duration-300 ease-in-out hover:scale-[1.03] flex items-center gap-4"
+                        className="cursor-pointer group bg-sky-50 border border-[#00bfff] rounded-2xl p-6 shadow-xl backdrop-blur hover:bg-pink-100 transition duration-300 ease-in-out hover:scale-[1.03] flex items-center gap-4"
                     >
                         <div className="bg-indigo-100 text-indigo-700 p-3 rounded-full group-hover:bg-pink-200 group-hover:text-pink-700 transition">
                             {item.icon}

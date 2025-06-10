@@ -63,8 +63,8 @@ const ListOrders = ({ token }) => {
     return <Loader message="Loading Orders" />;
   }
   return (
-    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-gray-50 to-white min-h-screen mt-10 sm:mt-0">
-      <h1 className="text-4xl font-extrabold text-[#191973] mb-2 flex items-center gap-2 border-b pb-2">
+    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-black to-gray-800 min-h-screen mt-10 sm:mt-0">
+      <h1 className="text-4xl font-extrabold text-pink-500 mb-2 flex items-center gap-2 border-b pb-2">
         {Icon && <span className="text-pink-500">{Icon}</span>}
         {title}
       </h1>
@@ -72,9 +72,9 @@ const ListOrders = ({ token }) => {
         {orders.map((order, index) => (
           <div
             key={index}
-            className="border border-[#191973] rounded-xl p-6 shadow-md grid grid-cols-1 sm:grid-cols-[0.5fr_2fr_1.2fr_1fr_1fr] gap-6 bg-white hover:shadow-lg transition-shadow duration-300"
+            className="border border-[#00bfff] rounded-xl p-6 shadow-md grid grid-cols-1 sm:grid-cols-[0.5fr_2fr_1.2fr_1fr_1fr] gap-6 bg-sky-50 hover:shadow-lg transition-shadow duration-300"
           >
-            <span className="w-14 h-14 flex items-center justify-center border border-[#191973] rounded-md text-[2.5rem] text-pink-500">
+            <span className="w-14 h-14 flex items-center justify-center border border-[#101049] rounded-md text-[2.5rem] text-pink-500">
               <FiPackage className="object-contain" />
             </span>
             <div className="space-y-1 text-sm text-[#101049]">

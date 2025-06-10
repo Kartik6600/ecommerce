@@ -113,7 +113,7 @@ const EditProductPopup = ({ productId, token, onClose }) => {
     <div className='fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50'>
       <form
         onSubmit={onSubmitHandler}
-        className='bg-white p-6 rounded-lg max-w-2xl w-full overflow-y-auto max-h-[90vh]'
+        className='bg-sky-50 p-6 rounded-lg max-w-2xl w-full overflow-y-auto max-h-[90vh]'
       >
         <h2 className='text-xl font-bold text-[#101049] mb-4'>Edit Product</h2>
         <div className='flex gap-2 mb-3 flex-wrap'>
@@ -135,6 +135,7 @@ const EditProductPopup = ({ productId, token, onClose }) => {
                 )}
                 <input
                   onChange={(e) => setImage(e.target.files[0])}
+                  className='border border-[#191973]'
                   type='file'
                   id={`image${num}`}
                   hidden
@@ -144,21 +145,21 @@ const EditProductPopup = ({ productId, token, onClose }) => {
           })}
         </div>
         <input
-          className='w-full border p-2 mb-2'
+          className='w-full border border-[#191973] p-2 mb-2'
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder='Product Name'
           required
         />
         <textarea
-          className='w-full border p-2 mb-2'
+          className='w-full border border-[#191973] p-2 mb-2'
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder='Product Description'
           required
         />
         <input
-          className='w-full border p-2 mb-2'
+          className='w-full border border-[#191973] p-2 mb-2'
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           placeholder='Price'
@@ -169,7 +170,7 @@ const EditProductPopup = ({ productId, token, onClose }) => {
           list='category-options'
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className='w-full border p-2 mb-2'
+          className='w-full border border-[#191973] p-2 mb-2'
           placeholder='Category'
         />
         <datalist id='category-options'>
@@ -181,7 +182,7 @@ const EditProductPopup = ({ productId, token, onClose }) => {
           list='subCategory-options'
           value={subCategory}
           onChange={(e) => setSubCategory(e.target.value)}
-          className='w-full border p-2 mb-2'
+          className='w-full border border-[#191973] p-2 mb-2'
           placeholder='Subcategory'
         />
         <datalist id='subCategory-options'>
@@ -194,7 +195,7 @@ const EditProductPopup = ({ productId, token, onClose }) => {
             <span
               key={size}
               onClick={() => toggleSize(size)}
-              className={`px-3 py-1 border rounded cursor-pointer ${sizes.includes(size) ? 'bg-pink-200' : 'bg-[#ccf2ff]'}`}
+              className={`px-3 py-1 border border-[#191973] rounded cursor-pointer ${sizes.includes(size) ? 'bg-pink-200' : 'bg-[#ccf2ff]'}`}
             >
               {size}
             </span>
@@ -217,10 +218,10 @@ const EditProductPopup = ({ productId, token, onClose }) => {
           <span>Mark as Available</span>
         </label>
         <div className='flex gap-2 justify-end'>
-          <button type='button' onClick={onClose} className='px-4 py-2 border rounded-md'>
+          <button type='button' onClick={onClose} className='px-4 py-2 border border-[#191973] rounded-md'>
             Cancel
           </button>
-          <button type='submit' className='px-4 py-2 bg-[#00bfff] text-white rounded-md'>
+          <button type='submit' className='px-4 py-2 bg-[#00bfff] text-[#101049] rounded-md border border-[#191973]'>
             Update
           </button>
         </div>

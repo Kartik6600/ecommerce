@@ -1,7 +1,7 @@
 import React from 'react';
 const Loader = ({ message = "Loading", className = "" }) => {
   return (
-    <div className={`min-h-screen flex flex-col items-center justify-center bg-gray-50 ${className}`}>
+    <div className={`min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-black to-gray-800 ${className}`}>
       <p className="text-xl text-gray-800 font-semibold flex items-center animate-pulse-text">
         <span>{message}</span>
         <div className="flex space-x-3 ml-4">

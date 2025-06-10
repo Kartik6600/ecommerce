@@ -45,7 +45,7 @@ const Product = () => {
   useEffect(() => {
     fetchProductData();
   }, [productId]);
-  if (!productData) return <div className="text-center py-20 text-[#101049]">Loading product...</div>;
+  if (!productData) return <div className="text-center py-20 text-[#00bfff]">Loading product...</div>;
   return (
     <motion.div
       className="py-10"

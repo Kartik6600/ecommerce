@@ -38,13 +38,13 @@ const ListUsers = ({ token }) => {
     return <Loader message="Loading Users" />;
   }
   return (
-    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-gray-50 to-white min-h-screen mt-10 sm:mt-0">
-      <h1 className="text-4xl font-extrabold text-[#191973] mb-2 flex items-center gap-2 border-b pb-2">
+    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-black to-gray-800 min-h-screen mt-10 sm:mt-0">
+      <h1 className="text-4xl font-extrabold text-pink-500 mb-2 flex items-center gap-2 border-b pb-2">
         {Icon && <span className="text-pink-500">{Icon}</span>}
         {title}
       </h1>
       <div className="flex flex-col gap-3">
-        <div className="hidden md:grid grid-cols-[1fr_2fr_2fr_1fr_1fr_1fr_1fr_1fr] items-center bg-[#f0f4ff] border border-[#191973] text-[#101049] text-sm font-semibold rounded-md px-4 py-2">
+        <div className="hidden md:grid grid-cols-[1fr_2fr_2fr_1fr_1fr_1fr_1fr_1fr] items-center bg-indigo-100 border border-[#00bfff] text-[#101049] text-sm font-semibold rounded-md px-4 py-2">
           <span>Image</span>
           <span>Name</span>
           <span>Email</span>
@@ -57,7 +57,7 @@ const ListUsers = ({ token }) => {
         {users.map((user, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 md:grid-cols-[1fr_2fr_2fr_1fr_1fr_1fr_1fr_1fr] items-center gap-2 px-4 py-2 border border-[#191973] bg-white shadow-sm rounded-lg hover:shadow-md transition duration-200"
+            className="grid grid-cols-1 md:grid-cols-[1fr_2fr_2fr_1fr_1fr_1fr_1fr_1fr] items-center gap-2 px-4 py-2 border border-[#00bfff] bg-sky-50 shadow-sm rounded-lg hover:shadow-md transition duration-200"
           >
             {user.profileImage ? (
               <img

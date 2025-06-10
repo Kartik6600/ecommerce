@@ -10,7 +10,7 @@ const EditCouponPopup = ({
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
       <form
         onSubmit={handleEditSubmit}
-        className="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-md space-y-4"
+        className="bg-sky-50 p-6 rounded-lg shadow-lg w-[90%] max-w-md space-y-4"
       >
         <h2 className="text-lg font-semibold text-[#101049]">Update Coupon</h2>
         <div className="flex justify-between text-[#101049] w-full">
@@ -48,13 +48,13 @@ const EditCouponPopup = ({
           <button
             type="button"
             onClick={closeDialog}
-            className="px-4 py-2 text-gray-700 border border-gray-400 rounded"
+            className="px-4 py-2 text-gray-700 border border-[#101049] rounded"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-4 py-2 bg-[#00bfff] text-white rounded hover:bg-[#009acd]"
+            className="px-4 py-2 bg-[#00bfff] text-[#101049] rounded border border-[#101049] hover:bg-[#009acd]"
           >
             Update
           </button>

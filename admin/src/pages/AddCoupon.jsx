@@ -43,21 +43,21 @@ const AddCoupon = ({ token }) => {
     }
   }
   return (
-    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-gray-50 to-white min-h-screen mt-10 sm:mt-0">
-      <h1 className="text-4xl font-extrabold text-[#191973] mb-2 flex items-center gap-2 border-b pb-2">
+    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-black to-gray-800 min-h-screen mt-10 sm:mt-0">
+      <h1 className="text-4xl font-extrabold text-pink-500 mb-2 flex items-center gap-2 border-b pb-2">
         {Icon && <span className="text-pink-500">{Icon}</span>}
         {title}
       </h1>
       <div className="flex flex-col items-center">
         <form onSubmit={onSubmitHandler} className="grid w-full max-w-3xl grid-cols-1 md:grid-cols-2 gap-4">
           <div className="col-span-1">
-            <p className="mb-2 text-[#101049]">Coupon Name</p>
-            <input onChange={(e) => setName(e.target.value)} value={name} className="w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049] bg-white" type="text" placeholder="Type here" required />
+            <p className="mb-2 text-orange-400">Coupon Name</p>
+            <input onChange={(e) => setName(e.target.value)} value={name} className="w-full px-3 py-2 border border-[#00bfff] rounded-md text-[#101049] bg-sky-50" type="text" placeholder="Type here" required />
           </div>
           <div className="col-span-1">
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-2 mb-2">
-                <p className="text-[#101049]">Coupon Code</p>
+                <p className="text-orange-400">Coupon Code</p>
               </div>
               <p className="text-[#FF0000] text-xs">(Only Contain A-Z , 0-9, @ , #)</p>
             </div>
@@ -67,7 +67,7 @@ const AddCoupon = ({ token }) => {
                 if (/^[A-Z0-9@#]*$/.test(value)) setCode(value);
               }}
               value={code}
-              className="w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049] bg-white"
+              className="w-full px-3 py-2 border border-[#00bfff] rounded-md text-[#101049] bg-sky-50"
               type="text"
               placeholder="Type here"
               required
@@ -75,7 +75,7 @@ const AddCoupon = ({ token }) => {
           </div>
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-2">
-              <p className="text-[#101049]">Discount %</p>
+              <p className="text-orange-400">Discount %</p>
               <p className="text-[#FF0000] text-xs">(0 – 100)</p>
             </div>
             <input
@@ -87,7 +87,7 @@ const AddCoupon = ({ token }) => {
                 }
               }}
               value={discount}
-              className="w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049] bg-white"
+              className="w-full px-3 py-2 border border-[#00bfff] rounded-md text-[#101049] bg-sky-50"
               type="text"
               placeholder="25"
               required
@@ -95,12 +95,12 @@ const AddCoupon = ({ token }) => {
           </div>
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-2">
-              <p className="text-[#101049]">Start Date</p>
+              <p className="text-orange-400">Start Date</p>
             </div>
             <input
               onChange={(e) => setStart(e.target.value)}
               value={start}
-              className="w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049] bg-white"
+              className="w-full px-3 py-2 border border-[#00bfff] rounded-md text-[#101049] bg-sky-50"
               type="date"
               min={today}
               required
@@ -108,19 +108,19 @@ const AddCoupon = ({ token }) => {
           </div>
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-2">
-              <p className="text-[#101049]">Expiry Date</p>
+              <p className="text-orange-400">Expiry Date</p>
             </div>
             <input
               onChange={(e) => setExpiry(e.target.value)}
               value={expiry}
-              className="w-full px-3 py-2 border border-[#191973] rounded-md text-[#101049] bg-white"
+              className="w-full px-3 py-2 border border-[#00bfff] rounded-md text-[#101049] bg-sky-50"
               type="date"
               min={start}
               required
             />
           </div>
           <div className="col-span-full flex justify-start">
-            <button type="submit" className="w-full md:w-40 py-3 mt-4 bg-pink-100 text-[#101049] border border-[#191973] rounded-md font-semibold active:bg-pink-500 active:text-white hover:bg-pink-200">
+            <button type="submit" className="w-full md:w-40 py-3 mt-4 bg-pink-100 text-[#101049] border border-[#bc7598] rounded-md font-semibold active:bg-pink-500 active:text-white hover:bg-pink-200">
               Add Coupon
             </button>
           </div>

@@ -13,8 +13,8 @@ const Sidebar = ({ setToken }) => {
   }))
   return (
     <>
-      <div className="sm:hidden flex items-center justify-between bg-white px-4 py-3 shadow-md fixed top-0 left-0 right-0 z-50 border-b border-[#191973]">
-        <h1 className="flex items-center gap-2 text-lg font-semibold text-[#191973]">
+      <div className="sm:hidden flex items-center justify-between bg-gradient-to-br from-black to-gray-800 px-4 py-3 shadow-md fixed top-0 left-0 right-0 z-50 border-b border-[#bc7598]">
+        <h1 className="flex items-center gap-2 text-lg font-semibold text-[#00bfff]">
           <Link to="/">
           <img
             src={assets.logo1}
@@ -31,7 +31,7 @@ const Sidebar = ({ setToken }) => {
           </Link>
         </h1>
         <button
-          className="text-2xl text-[#191973]"
+          className="text-2xl text-[#00bfff]"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <FiX /> : <FiMenu />}
@@ -41,7 +41,7 @@ const Sidebar = ({ setToken }) => {
         className={`fixed top-0 left-0 h-full z-40 transition-transform duration-300
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         sm:translate-x-0 sm:static sm:flex
-        w-64 bg-white border-r-2 border-[#191973] shadow-lg flex flex-col`}
+        w-64 bg-gradient-to-br from-black to-gray-800 border-r-2 border-[#bc7598] shadow-lg flex flex-col`}
       >
         {/* <div className="hidden sm:flex items-center justify-center py-6 text-xl font-bold text-[#bc7598] tracking-wide">
           Admin Panel
@@ -54,8 +54,8 @@ const Sidebar = ({ setToken }) => {
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-2 rounded-lg transition-all duration-300 ${isActive
-                  ? 'bg-pink-200 text-slate-700'
-                  : 'text-[#191973] hover:bg-pink-50'
+                  ? 'bg-pink-200 text-[#101049]'
+                  : 'text-[#00bfff] hover:bg-blue-100 hover:text-[#101049] hover:shadow-lg'
                 }`
               }
             >

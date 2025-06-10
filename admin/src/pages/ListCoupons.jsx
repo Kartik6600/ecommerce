@@ -119,13 +119,13 @@ const ListCoupons = ({ token }) => {
     return <Loader message="Loading Coupons" />;
   }
   return (
-    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-gray-50 to-white min-h-screen mt-10 sm:mt-0">
-      <h1 className="text-4xl font-extrabold text-[#191973] mb-2 flex items-center gap-2 border-b pb-2">
+    <div className="px-4 md:p-8 py-4 space-y-10 bg-gradient-to-br from-black to-gray-800 min-h-screen mt-10 sm:mt-0">
+      <h1 className="text-4xl font-extrabold text-pink-500 mb-2 flex items-center gap-2 border-b pb-2">
         {Icon && <span className="text-pink-500">{Icon}</span>}
         {title}
       </h1>
       <div className="flex flex-col gap-3">
-        <div className="hidden md:grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center bg-[#f0f4ff] border border-[#191973] text-[#101049] text-sm font-semibold rounded-md px-4 py-2">
+        <div className="hidden md:grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr] items-center bg-indigo-100 border border-[#00bfff] text-[#101049] text-sm font-semibold rounded-md px-4 py-2">
           <span>Name</span>
           <span>Code</span>
           <span>Discount</span>
@@ -139,7 +139,7 @@ const ListCoupons = ({ token }) => {
         {coupons.map((item, index) => (
           <div
             key={index}
-            className="grid md:grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr] grid-cols-1 gap-y-2 px-4 py-3 border border-[#191973] bg-white shadow-sm rounded-lg hover:shadow-md transition duration-200"
+            className="grid md:grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr_1fr] grid-cols-1 gap-y-2 px-4 py-3 border border-[#00bfff] bg-sky-50 shadow-sm rounded-lg hover:shadow-md transition duration-200"
           >
             <div className="md:hidden flex flex-col text-sm text-[#101049] gap-1">
               <p><span className="font-semibold">Name:</span> {item.name}</p>
