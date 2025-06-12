@@ -154,6 +154,20 @@ const Login = () => {
       >
         {currentState === 'Login' ? 'Sign In' : 'Sign Up'}
       </motion.button>
+      <motion.div
+        className="mt-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+      >
+        <button
+          onClick={() => window.location.href = `${backendUrl}/api/user/auth/google`}
+          className="w-full flex items-center justify-center gap-2 bg-white border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-50"
+        >
+          <FcGoogle />
+          Continue with Google
+        </button>
+      </motion.div>
     </motion.form>
   );
 };
