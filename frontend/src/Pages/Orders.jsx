@@ -163,12 +163,12 @@ const Orders = () => {
         </div>
         <div className="space-y-6">
           {orderData.map((order) => (
-            <div key={order._id} className="bg-zinc-100 border-2 border-[#FBCFE8] rounded-md p-4 shadow-md">
+            <div key={order._id} className="bg-sky-50 border-2 border-[#FBCFE8] rounded-md p-4 shadow-md">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-4">
                 <div className="flex flex-col gap-4 w-full">
                   {order.items.map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <Link className='cursor-pointer bg-zinc-100' to={`/product/${item.productId._id}`}>
+                      <Link className='cursor-pointer bg-sky-50' to={`/product/${item.productId._id}`}>
                         <img src={item.productId.image[0]} alt={item.name} className="w-20 h-20 object-cover border rounded-md" />
                         <div>
                           <p className="font-medium">{item.productId.name}</p>
@@ -260,7 +260,7 @@ const Orders = () => {
       </div>
       {showReceiptModal && receiptData && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={closeReceiptModal}>
-          <div className="bg-white w-[90%] max-w-4xl max-h-[90%] overflow-auto rounded-lg shadow-lg p-6 relative" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-sky-50 w-[90%] max-w-4xl max-h-[90%] overflow-auto rounded-lg shadow-lg p-6 relative" onClick={(e) => e.stopPropagation()}>
             {pdfDataUrl ? (
               <>
                 {/* <iframe 
@@ -549,7 +549,7 @@ const Orders = () => {
       )}
       {showReviewModal && selectedOrder && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white w-[90%] max-w-2xl max-h-[90vh] overflow-y-auto rounded-lg shadow-lg p-6 relative">
+          <div className="bg-sky-50 w-[90%] max-w-2xl max-h-[90vh] overflow-y-auto rounded-lg shadow-lg p-6 relative">
             <h2 className="text-2xl font-bold mb-4 text-[#101049]">Rate Your Products</h2>
             {selectedOrder.items.map((item, index) => (
               <div key={item.productId._id} className="mb-6 p-4 border border-[#191973] rounded">
@@ -574,7 +574,7 @@ const Orders = () => {
                           ...prev,
                           [item.productId._id]: star
                         }))}
-                        className={`text-2xl ${ratings[item.productId._id] >= star ? 'text-yellow-400' : 'text-gray-300'}`}
+                        className={`text-2xl ${ratings[item.productId._id] >= star ? 'text-yellow-400' : 'text-gray-500'}`}
                       >
                         ★
                       </button>
@@ -601,7 +601,7 @@ const Orders = () => {
             <div className="flex justify-end gap-4 mt-6">
               <button
                 onClick={() => setShowReviewModal(false)}
-                className="px-4 py-2 border border-[#101049] text-[#101049] rounded hover:bg-gray-100"
+                className="px-4 py-2 border border-[#101049] text-[#101049] rounded hover:bg-gray-300"
               >
                 Cancel
               </button>

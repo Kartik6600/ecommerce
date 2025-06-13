@@ -17,7 +17,7 @@ const Collection = () => {
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [size, setSize] = useState([]);
-  const [sortType, setSortType] = useState("relavent");
+  const [sortType, setSortType] = useState("Relavent");
   const categoryOptions = useMemo(() => 
     [...new Set(products.map(item => item.category).filter(Boolean))],
     [products]
@@ -47,9 +47,9 @@ const Collection = () => {
         item.sizes?.some(s => size.includes(s))
       );
     }
-    if (sortType === "low-high") {
+    if (sortType === "Low-High") {
       return [...filtered].sort((a, b) => a.price - b.price);
-    } else if (sortType === "high-low") {
+    } else if (sortType === "High-Low") {
       return [...filtered].sort((a, b) => b.price - a.price);
     }
     return filtered;
@@ -106,12 +106,12 @@ const Collection = () => {
       <div className="flex-1 flex flex-col px-4 md:px-8">
         <div className="text-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-4 py-10">
           <Title text1="ALL" text2="COLLECTIONS" />
-          <div className="relative group text-[#191973] self-start sm:self-auto bg-zinc-100">
+          <div className="relative group text-[#191973] self-start sm:self-auto bg-sky-50">
             <button className="border-2 border-[#FBCFE8] rounded-md px-3 py-1 flex items-center gap-2 text-sm font-medium w-40 justify-between">
-              <span className="flex text-[#191973] items-center gap-2">Sort By</span>
+              <span className="flex text-[#191973] items-center gap-2">Sort By: {sortType}</span>
               <FaChevronRight className="group-hover:rotate-90 text-[#191973] transition-transform" />
             </button>
-            <div className="absolute z-10 hidden group-hover:flex flex-col mt-1 w-40 border-2 border-[#FBCFE8] rounded-md bg-zinc-100 shadow-md text-sm font-medium">
+            <div className="absolute z-10 hidden group-hover:flex flex-col mt-1 w-40 border-2 border-[#FBCFE8] rounded-md bg-sky-50 shadow-md text-sm font-medium">
               {["relavent", "low-high", "high-low"].map(type => (
                 <button
                   key={type}
@@ -144,7 +144,7 @@ const Collection = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-28">
           {filteredAndSortedProducts.map((item, index) => (
             <motion.div
-              className="border border-[#00bfff] rounded-md"
+              className="bg-sky-50 border border-[#00bfff] rounded-md"
               key={item._id || index}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -164,9 +164,9 @@ const Collection = () => {
   );
 };
 const FilterGroup = ({ title, options, toggle }) => (
-  <div className="border-2 border-[#FBCFE8] rounded-md p-4 bg-zinc-100">
+  <div className="border-2 border-[#FBCFE8] rounded-md p-4 bg-sky-50">
     <p className="mb-3 text-sm font-medium text-[#191973]">{title}</p>
-    <div className="flex flex-col gap-2 text-sm font-light text-orange-800">
+    <div className="flex flex-col gap-2 text-sm font-light text-orange-600">
       {options.map(option => (
         <label key={option} className="flex gap-2 items-center">
           <input

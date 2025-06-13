@@ -221,20 +221,20 @@ const PlaceOrder = () => {
             <Title text1={'DELIVERY'} text2={'INFORMATION'} />
           </div>
           <div className='flex gap-3 '>
-            <input required onChange={onChangeHandler} name='firstName' value={formData.firstName} className='bg-zinc-100 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='First name' />
-            <input required onChange={onChangeHandler} name='lastName' value={formData.lastName} className='bg-zinc-100 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Last name' />
+            <input required onChange={onChangeHandler} name='firstName' value={formData.firstName} className='bg-sky-50 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='First name' />
+            <input required onChange={onChangeHandler} name='lastName' value={formData.lastName} className='bg-sky-50 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Last name' />
           </div>
-          <input required onChange={onChangeHandler} name='email' value={formData.email} className='bg-zinc-100 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="email" placeholder='Email address' />
-          <input required onChange={onChangeHandler} name='street' value={formData.street} className='bg-zinc-100 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Street' />
+          <input required onChange={onChangeHandler} name='email' value={formData.email} className='bg-sky-50 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="email" placeholder='Email address' />
+          <input required onChange={onChangeHandler} name='street' value={formData.street} className='bg-sky-50 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Street' />
           <div className='flex gap-3'>
-            <input required onChange={onChangeHandler} name='city' value={formData.city} className='bg-zinc-100 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='City' />
-            <input required onChange={onChangeHandler} name='state' value={formData.state} className='bg-zinc-100 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='State' />
+            <input required onChange={onChangeHandler} name='city' value={formData.city} className='bg-sky-50 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='City' />
+            <input required onChange={onChangeHandler} name='state' value={formData.state} className='bg-sky-50 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='State' />
           </div>
           <div className='flex gap-3'>
-            <input required onChange={onChangeHandler} name='zipcode' value={formData.zipcode} className='bg-zinc-100 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Zip code' />
-            <input required onChange={onChangeHandler} name='country' value={formData.country} className='bg-zinc-100 border border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Country' />
+            <input required onChange={onChangeHandler} name='zipcode' value={formData.zipcode} className='bg-sky-50 border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Zip code' />
+            <input required onChange={onChangeHandler} name='country' value={formData.country} className='bg-sky-50 border border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Country' />
           </div>
-          <input required onChange={onChangeHandler} name='phone' value={formData.phone} className='bg-zinc-100 border border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Phone number' />
+          <input required onChange={onChangeHandler} name='phone' value={formData.phone} className='bg-sky-50 border border-2 border-[#FBCFE8] text-[#101049] rounded py-1.5 px-3.5 w-full' type="text" placeholder='Phone number' />
         </div>
         <div className='mt-2'>
           <div className='mt-2 w-full sm:w-[450px]'>
@@ -242,7 +242,7 @@ const PlaceOrder = () => {
           </div>
           <div className="mt-12">
             <Title text1="DISCOUNT" text2="COUPON" />
-            <div className="bg-zinc-100 w-full flex flex-col sm:flex-row items-stretch gap-2 border-2 border-[#FBCFE8] rounded-md">
+            <div className="bg-sky-50 w-full flex flex-col sm:flex-row items-stretch gap-2 border-2 border-[#FBCFE8] rounded-md">
               <input
                 onChange={(e) => {
                   let value = e.target.value.toUpperCase();
@@ -250,12 +250,12 @@ const PlaceOrder = () => {
                   setCouponCode(filteredValue);
                 }}
                 value={couponCode}
-                className="bg-zinc-100 flex-1 outline-none text-[#101049] px-3 py-2"
+                className="bg-sky-50 flex-1 outline-none text-[#101049] px-3 py-2"
                 type="text"
                 placeholder="Enter coupon code"
               />
               <button
-                className="bg-sky-300 text-[#101049] border-2 border-[#FBCFE8] rounded-md text-sm px-8 py-4 font-semibold active:bg-[#101049] active:text-white hover:bg-pink-200"
+                className="bg-sky-300 text-[#101049] border-2 border-[#101049] rounded-md text-sm px-8 py-4 font-semibold active:bg-[#101049] active:text-white hover:bg-pink-200"
                 type="button"
                 onClick={onSubmitCoupon}
               >
@@ -266,18 +266,18 @@ const PlaceOrder = () => {
           <div className='mt-12'>
             <Title text1={'PAYMENT'} text2={'METHOD'} />
             <div className='flex gap-3 flex-col lg:flex-row'>
-              <div onClick={() => setMethod('stripe')} className='bg-zinc-100 flex items-center gap-3 border-2 border-[#FBCFE8] rounded-md p-2 px-3 cursor-pointer'>
+              <div onClick={() => setMethod('stripe')} className='bg-sky-50 flex items-center gap-3 border-2 border-[#FBCFE8] rounded-md p-2 px-3 cursor-pointer'>
                 <p className={`mt-1.5 min-w-3.5 h-3.5 border border-[#191973] rounded-full ${method === 'stripe' ? 'bg-green-400' : ''}`}></p>
                 <FaStripe className='text-2xl text-[#101049] w-10 h-10' />
                 <p className='text-[#101049] text-md font-bold'>Pay</p>
               </div>
-              <div onClick={() => setMethod('qr')} className='bg-zinc-100 flex items-center gap-3 border-2 border-[#FBCFE8] rounded-md p-2 px-3 cursor-pointer'>
+              <div onClick={() => setMethod('qr')} className='bg-sky-50 flex items-center gap-3 border-2 border-[#FBCFE8] rounded-md p-2 px-3 cursor-pointer'>
                 <p className={`mt-1.5 min-w-3.5 h-3.5 border border-[#191973] rounded-full ${method === 'qr' ? 'bg-green-400' : ''}`}></p>
                 <FaQrcode className='text-2xl text-[#101049] w-10 h-10' />
                 <p className='text-[#101049] text-md font-bold'>QR</p>
               </div>
               <div className='relative group'>
-                <div onClick={() => setMethod('cod')} className='bg-zinc-100 flex items-center gap-3 border-2 border-[#FBCFE8] rounded-md p-2 px-3 cursor-pointer'>
+                <div onClick={() => setMethod('cod')} className='bg-sky-50 flex items-center gap-3 border-2 border-[#FBCFE8] rounded-md p-2 px-3 cursor-pointer'>
                   <p className={`mt-1.5 min-w-3.5 h-3.5 border border-[#191973] rounded-full ${method === 'cod' ? 'bg-green-400' : ''}`}></p>
                   <FaMoneyBillWave className='text-2xl text-[#101049] w-10 h-10' />
                   <p className='text-[#101049] text-md font-bold'>COD</p>
@@ -295,7 +295,7 @@ const PlaceOrder = () => {
       </form >
       {showConfirmation && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-40 flex items-center justify-center z-50">
-          <div className="bg-zinc-100 rounded-xl p-8 w-[90%] max-w-md shadow-lg border-2 border-[#FBCFE8]">
+          <div className="bg-sky-50 rounded-xl p-8 w-[90%] max-w-md shadow-lg border-2 border-[#FBCFE8]">
             <h2 className="text-lg font-semibold text-[#101049] mb-4">Confirm Your Order</h2>
             <p className="mb-2">Payment Method: <strong>{method.toUpperCase()}</strong></p>
             {(() => {
@@ -331,7 +331,7 @@ const PlaceOrder = () => {
       )}
       {showQR && method === "qr" && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className=" bg-zinc-100 p-6 rounded-lg max-w-sm w-full text-center">
+          <div className="bg-sky-50 p-6 rounded-lg max-w-sm w-full text-center">
             <h2 className="text-lg font-bold mb-2 text-[#101049]">Scan QR & Pay</h2>
             <img src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiUrl)}`} alt="QR Code" className="mx-auto" />
             <p className="mb-2">Payment Method: <strong>{method.toUpperCase()}</strong></p>

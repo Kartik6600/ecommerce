@@ -40,7 +40,7 @@ const Navbar = () => {
         setProfileOpen(false);
     };
     const navLinkClass = ({ isActive }) =>
-        `flex flex-col items-center space-y-1 text-[16px] font-medium transition duration-200 hover:text-pink-500 ${isActive ? "text-pink-500 border-b-2 border-pink-500" : "text-[#FBCFE8]"
+        `flex flex-col items-center space-y-1 text-[16px] font-medium transition duration-200 hover:text-pink-500 ${isActive ? "text-pink-500 border-b-2 border-pink-500" : "text-pink-200"
         }`;
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -132,21 +132,21 @@ const Navbar = () => {
                 <div className="hidden lg:flex items-center gap-5">
                     <FaSearch
                         onClick={() => setShowSearch(true)}
-                        className="w-5 h-5 cursor-pointer text-[#FBCFE8] hover:text-pink-500 transition"
+                        className="w-5 h-5 cursor-pointer text-[#ffb74d] hover:text-pink-500 transition"
                     />
                     {token && (<>
                         <Link to="/cart" className="relative">
-                            <FaShoppingCart className="w-6 h-6 text-[#FBCFE8] hover:text-pink-500 transition" />
+                            <FaShoppingCart className="w-6 h-6 text-[#ffb74d] hover:text-pink-500 transition" />
                             {getCartCount() > 0 && (
-                                <span className="absolute -right-1 -bottom-1 text-[10px] bg-blue-600 text-white rounded-full h-4 w-4 flex items-center justify-center">
+                                <span className="absolute -right-1 -bottom-1 text-[10px] bg-pink-600 text-white rounded-full h-4 w-4 flex items-center justify-center">
                                     {getCartCount()}
                                 </span>
                             )}
                         </Link>
                         <Link to="/wishlist" className="relative">
-                            <FaHeart className="w-6 h-6 text-[#FBCFE8] hover:text-pink-500 transition" />
+                            <FaHeart className="w-6 h-6 text-[#ffb74d] hover:text-pink-500 transition" />
                             {getWishCount() > 0 && (
-                                <span className="absolute -right-1 -bottom-1 text-[10px] bg-blue-600 text-white rounded-full h-4 w-4 flex items-center justify-center">
+                                <span className="absolute -right-1 -bottom-1 text-[10px] bg-pink-600 text-white rounded-full h-4 w-4 flex items-center justify-center">
                                     {getWishCount()}
                                 </span>
                             )}
@@ -161,10 +161,10 @@ const Navbar = () => {
                                     navigate("/login");
                                 }
                             }}
-                            className="w-6 h-6 cursor-pointer text-[#FBCFE8] hover:text-pink-500 transition"
+                            className="w-6 h-6 cursor-pointer text-[#ffb74d] hover:text-pink-500 transition"
                         />
                         {token && profileOpen && (
-                            <div className="absolute right-0 mt-2 z-10 bg-black text-[#FBCFE8] rounded shadow-md w-40 p-3 space-y-2">
+                            <div className="absolute right-0 mt-2 z-10 bg-black text-[#ffb74d] rounded shadow-md w-40 p-3 space-y-2">
                                 <button onClick={() => { navigate("/profile"); setProfileOpen(false); }} className="flex items-center gap-2 hover:text-pink-500">
                                     <FaUserCircle className="w-4 h-4" />
                                     Profile
@@ -213,7 +213,7 @@ const Navbar = () => {
                                         to={to}
                                         onClick={() => setVisible(false)}
                                         className={({ isActive }) =>
-                                            `flex items-center gap-3 text-[16px] font-medium transition duration-200 hover:text-pink-500 ${isActive ? "text-pink-500" : "text-[#FBCFE8]"}`
+                                            `flex items-center gap-3 text-[16px] font-medium transition duration-200 hover:text-pink-500 ${isActive ? "text-pink-500" : "text-pink-200"}`
                                         }
                                     >
                                         {icon}
@@ -227,12 +227,12 @@ const Navbar = () => {
                                             to={to}
                                             key={label}
                                             onClick={() => setVisible(false)}
-                                            className="flex items-center gap-3 text-[16px] font-medium text-[#FBCFE8] hover:text-pink-500 relative"
+                                            className="flex items-center gap-3 text-[16px] font-medium text-[#ffb74d] hover:text-pink-500 relative"
                                         >
                                             {icon}
                                             {label}
                                             {badge > 0 && (
-                                                <span className="absolute right-0 -top-2 text-[10px] bg-blue-600 text-white rounded-full h-4 w-4 flex items-center justify-center">
+                                                <span className="absolute right-0 -top-2 text-[10px] bg-pink-500 text-white rounded-full h-4 w-4 flex items-center justify-center">
                                                     {badge}
                                                 </span>
                                             )}
@@ -241,7 +241,7 @@ const Navbar = () => {
                                         <button
                                             key={label}
                                             onClick={onClick}
-                                            className="flex items-center gap-3 text-[16px] font-medium text-[#FBCFE8] hover:text-pink-500"
+                                            className="flex items-center gap-3 text-[16px] font-medium text-[#ffb74d] hover:text-pink-500"
                                         >
                                             {icon}
                                             {label}

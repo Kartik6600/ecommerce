@@ -35,7 +35,7 @@ const Cart = () => {
             const productData = item?.productData;
             return (
               <>
-                <div key={index} className='bg-zinc-100 py-4 border-2 border-[#FBCFE8] text-[#101049] grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] item-center gap-4'>
+                <div key={index} className='bg-sky-50 py-4 border-2 border-[#FBCFE8] text-[#101049] grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] item-center gap-4'>
                   <div className='flex items-start gap-6'>
                     <Link className='cursor-pointer' to={`/product/${productData?._id}`}>
                       <img className='w-16 sm:w-20 border border-[#191973] rounded-md' src={productData?.image[0]} alt="" />

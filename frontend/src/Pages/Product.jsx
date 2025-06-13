@@ -77,7 +77,7 @@ const Product = () => {
           </motion.div>
         </div>
         <motion.div
-          className="flex-1 bg-zinc-100 border-2 border-[#FBCFE8] rounded-md p-2"
+          className="flex-1 bg-sky-50 border-2 border-[#FBCFE8] rounded-md p-2"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -161,11 +161,11 @@ const Product = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <div className="flex">
-          <p className="border-2 px-5 py-3 text-sm text-[#101049] border-[#FBCFE8] rounded-md font-semibold bg-zinc-100">
+          <p className="border-2 px-5 py-3 text-sm text-[#101049] border-[#FBCFE8] rounded-md font-semibold bg-sky-50">
             Description
           </p>
         </div>
-        <div className="flex flex-col gap-4 border-2 border-[#FBCFE8] rounded-md px-6 py-6 text-sm text-[#101049] bg-zinc-100">
+        <div className="flex flex-col gap-4 border-2 border-[#FBCFE8] rounded-md px-6 py-6 text-sm text-[#101049] bg-sky-50">
           <p>{productData.name}</p>
           <p>{productData.description}</p>
           <p>Just {currency}{productData.price}</p>
@@ -179,7 +179,7 @@ const Product = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
       >
         <div className="flex">
-          <p className="border-2 px-5 py-3 text-sm text-[#101049] border-[#FBCFE8] rounded-md font-semibold bg-zinc-100">
+          <p className="border-2 px-5 py-3 text-sm text-[#101049] border-[#FBCFE8] rounded-md font-semibold bg-sky-50">
             Reviews
           </p>
         </div>
@@ -193,7 +193,7 @@ const Product = () => {
               className={`flex items-center gap-1 px-3 py-1 text-sm rounded-full border-2 ${
                 selectedRating === star
                   ? "bg-green-200 border-[#FBCFE8] text-[#101049]"
-                  : "bg-zinc-100 border-[#FBCFE8] text-[#101049]"
+                  : "bg-sky-50 border-[#FBCFE8] text-[#101049]"
               }`}
             >
               {[...Array(typeof star === "number" ? star : 0)].map((_, i) => (
@@ -203,7 +203,7 @@ const Product = () => {
             </motion.button>
           ))}
         </div>
-        <div className="flex flex-col gap-4 border-2 border-[#FBCFE8] rounded-md px-6 py-6 text-sm text-[#101049] bg-zinc-100">
+        <div className="flex flex-col gap-4 border-2 border-[#FBCFE8] rounded-md px-6 py-6 text-sm text-[#101049] bg-sky-50">
           {filteredReviews.length > 0 ? (
             filteredReviews.map((item, index) => (
               <motion.div

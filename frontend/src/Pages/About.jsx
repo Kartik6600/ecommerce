@@ -18,7 +18,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className='bg-zinc-50 w-full md:max-w-[450px] border-2 border-[#FBCFE8] rounded-lg flex items-center justify-center text-[#191973] h-[300px]'
+          className='bg-sky-50 w-full md:max-w-[450px] border-2 border-[#FBCFE8] rounded-lg flex items-center justify-center text-[#191973] h-[300px]'
         >
           <RiTeamFill size={150} />
         </motion.div>
@@ -27,7 +27,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className='bg-zinc-100 flex flex-col gap-4 text-orange-800 p-5 border-2 border-[#FBCFE8] rounded-lg w-full max-h-[300px] overflow-y-auto'
+          className='bg-sky-50 flex flex-col gap-4 text-orange-800 p-5 border-2 border-[#FBCFE8] rounded-lg w-full max-h-[300px] overflow-y-auto'
         >
           <b className='text-[#191973] text-xl'>Welcome to Forever</b>
           <p className='text-sm'>
@@ -80,7 +80,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className='bg-zinc-100 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border-2 border-[#FBCFE8] rounded-md px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5 text-[#191973]'
+            className='bg-sky-50 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border-2 border-[#FBCFE8] rounded-md px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5 text-[#191973]'
           >
             <b className='flex text-[#191973] items-center gap-2'>
               <FaCheckCircle className="text-green-600" /> {item.title}

@@ -147,7 +147,7 @@ const Profile = () => {
                 <div className="flex justify-between text-base sm:text-2xl mb-4">
                     <Title text1={'MY'} text2={'PROFILE'} />
                 </div>
-                <div className='bg-zinc-100 rounded-2xl shadow-xl p-8 flex flex-col items-center gap-6 border-2 border-[#FBCFE8]'>
+                <div className='bg-sky-50 rounded-2xl shadow-xl p-8 flex flex-col items-center gap-6 border-2 border-[#FBCFE8]'>
                     <div className="relative">
                         {selectedImage ? (
                             <img
@@ -261,7 +261,7 @@ const Profile = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
                     <form
                         onSubmit={handleProfileUpdate}
-                        className="bg-zinc-100 p-6 rounded-lg shadow-lg w-[90%] max-w-md space-y-4"
+                        className="bg-sky-50 p-6 rounded-lg shadow-lg w-[90%] max-w-md space-y-4"
                     >
                         <h2 className="text-lg font-semibold text-[#101049]">Edit Profile</h2>
                         <div>

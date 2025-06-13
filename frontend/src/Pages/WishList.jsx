@@ -14,15 +14,16 @@ const Wishlist = () => {
       <div>
         {wishlistItems.map((item, index) => (
           <>
-            <div key={index} className='bg-zinc-100 py-4 border-2 border-[#FBCFE8] text-[#101049] grid grid-cols-[4fr_0.5fr] sm:grid-cols-[4fr_0.5fr] items-center gap-4'>
+            <div key={index} className='bg-sky-50 py-4 border-2 border-[#FBCFE8] text-[#101049] grid grid-cols-[4fr_0.5fr] sm:grid-cols-[4fr_0.5fr] items-center gap-4'>
               <Link className='cursor-pointer' to={`/product/${item?.productId?._id}`}>
                 <div className='flex items-start gap-6'>
                   <img className='w-20 sm:w-20 border border-[#191973] rounded-md' src={item?.productId?.image[0]} alt="" />
                   <div>
-                    <p className='text-xs sm:text-lg font-medium text-[#101049]'>{item?.productId?.name}</p>
-                    <p className='text-xs sm:text-lg text-[#101049]'>Category : {item?.productId?.category} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sub Category : {item?.productId?.subCategory}</p>
-                    <p className='text-xs sm:text-lg text-[#101049]'>Sub Category : {item?.productId?.subCategory}</p>
-                    <p className='text-xs sm:text-lg text-[#101049]'>Available Sizes : {item?.productId?.sizes?.join('   ')}</p>
+                    <p className='text-md font-medium text-[#101049]'>{item?.productId?.name}</p>
+                    <p className='text-sm text-[#101049]'>Category : {item?.productId?.category}</p>
+                    <p className='text-sm text-[#101049]'>Sub Category : {item?.productId?.subCategory}</p>
+                    <p className='text-sm text-[#101049]'>Available Sizes : {item?.productId?.sizes?.join('   ')}</p>
+                    <p className='text-sm text-[#101049]'>Price : {item?.productId?.price}</p>
                   </div>
                 </div>
               </Link>

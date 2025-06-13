@@ -53,7 +53,7 @@ const Login = () => {
   return (
     <motion.form
       onSubmit={onSubmitHandler}
-      className='w-[90%] max-w-md mx-auto my-16 px-4 py-6 flex flex-col gap-4 text-gray-800'
+      className='bg-gradient-to-br from-black to-gray-800 border border-[#FBCFE8] shadow-2xl rounded-lg w-[90%] max-w-md mx-auto my-16 px-4 py-6 flex flex-col gap-4 text-gray-800'
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -82,7 +82,7 @@ const Login = () => {
                 value={firstName}
                 type="text"
                 placeholder="First Name"
-                className="input-style"
+                className="rounded-md w-full px-3 py-2 border border-[#FBCFE8] outline-none text-pink-400 bg-black"
                 required
               />
             </motion.div>
@@ -98,7 +98,7 @@ const Login = () => {
                 value={lastName}
                 type="text"
                 placeholder="Last Name"
-                className="input-style"
+                className="rounded-md w-full px-3 py-2 border border-[#FBCFE8] outline-none text-pink-400 bg-black"
                 required
               />
             </motion.div>
@@ -110,7 +110,7 @@ const Login = () => {
         value={email}
         type="email"
         placeholder="Email"
-        className="input-style border-2 border-[#FBCFE8]"
+        className="rounded-md w-full px-3 py-2 border border-[#FBCFE8] outline-none text-pink-400 bg-black"
         required
         whileFocus={{ scale: 1.03 }}
         initial={{ opacity: 0 }}
@@ -122,7 +122,7 @@ const Login = () => {
         value={password}
         type="password"
         placeholder="Password"
-        className="input-style border-2 border-[#FBCFE8]"
+        className="rounded-md w-full px-3 py-2 border border-[#FBCFE8] outline-none text-pink-400 bg-black"
         required
         whileFocus={{ scale: 1.03 }}
         initial={{ opacity: 0 }}
