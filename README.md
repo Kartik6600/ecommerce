@@ -90,13 +90,20 @@ Fully decoupled architecture
 ## Steps to Run the Application
 
 1. **Download the Zip File**  
-   Download the project repository as a zip file or clone it using Git.
-
+   **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/ecommerce.git
+   cd ecommerce
+   ```
 2. **Run the Backend**  
    - Open the `backend` folder in the terminal.  
      ```bash
      cd path/ecommerce/backend
-     ```  
+     ```
+   - Install backend Dependencies.
+     ```bash
+     npm Install
+     ```
    - Start the backend server:  
      ```bash
      npm run dev
@@ -106,6 +113,10 @@ Fully decoupled architecture
    - Open the `frontend` folder in the terminal.  
      ```bash
      cd path/ecommerce/frontend
+     ```
+   - Install frontend Dependencies.
+     ```bash
+     npm Install
      ```  
    - Start the frontend development server:  
      ```bash
@@ -116,7 +127,11 @@ Fully decoupled architecture
    - Open the `admin` folder in the terminal.  
      ```bash
      cd path/ecommerce/admin
-     ```  
+     ```
+   - Install admin Dependencies.
+     ```bash
+     npm Install
+     ``` 
    - Start the admin development server:  
      ```bash
      npm run dev
