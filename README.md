@@ -182,3 +182,5 @@ ecommerce/
 **🌐 Portfolio: https://kartik-patel-portfolio-pi.vercel.app/**
 
 **💼 LinkedIn: www.linkedin.com/in/kartik-patel-2b6374268**
+##
+**⭐ If you found this project helpful, please consider giving it a star!**
