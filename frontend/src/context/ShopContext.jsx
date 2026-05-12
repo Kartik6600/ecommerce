@@ -85,7 +85,7 @@ const ShopContextProvider = (props) => {
       }
     }
   };
-  const getWishCount = () => wishlistItems.length;
+  const getWishCount = () => wishlistItems?.length || 0;
   const updateWishlist = async (itemId) => {
     if (token) {
       try {

@@ -24,6 +24,7 @@ import './index.css';
 const App = () => {
   return (
     <Theme>
+    <>
       <ToastContainer />
       <Navbar />
       <SearchBar />
@@ -44,6 +45,7 @@ const App = () => {
         <Route path="/oauth-redirect" element={<OAuthRedirect />} />
       </Routes>
       <Footer />
+      </>
     </Theme>
   );
 };
